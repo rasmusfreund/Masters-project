@@ -1,0 +1,51 @@
+\documentclass[border=15pt, multi, tikz]{standalone}
+\usepackage{import}
+\subimport{layers/}{init}
+\usetikzlibrary{positioning}
+
+\def\ConvColor{rgb:yellow,5;red,2.5;white,5}
+\def\ConvReluColor{rgb:yellow,5;red,5;white,5}
+\def\PoolColor{rgb:red,1;black,0.3}
+\def\FcColor{rgb:blue,5;green,2.5;white,5}
+\def\SoftmaxColor{rgb:magenta,5;black,7}
+
+\begin{document}
+	
+	\begin{tikzpicture}
+		\tikzstyle{connection}=[ultra thick,every node/.style={sloped,allow upside down},draw=\edgecolor,opacity=0.7]
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Draw Layer Blocks
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		% conv1 and pool1
+		\pic[shift={(0,0,0)}] at (0,0,0) {RightBandedBox={name=cr1,caption=conv1,%
+				xlabel={{"8","channel"}},zlabel=36001,fill=\ConvColor,bandfill=\ConvReluColor,%
+				height=40,width={2.5,2.5},depth=40}};
+		\pic[shift={(0,0,0)}] at (cr1-east) {Box={name=p1,%
+				fill=\PoolColor,opacity=0.5,height=35,width=1,depth=35}};
+		
+		% conv2 and pool2
+		\pic[shift={(1.5,0,0)}] at (p1-east) {RightBandedBox={name=cr2,caption=conv2,%
+				xlabel={{"16","channel"}},zlabel=I/2,fill=\ConvColor,bandfill=\ConvReluColor,%
+				height=35,width={3.5,3.5},depth=35}};
+		\pic[shift={(0,0,0)}] at (cr2-east) {Box={name=p2,%
+				fill=\PoolColor,opacity=0.5,height=30,width=1,depth=30}};
+		
+		% Fully connected layers
+		\pic[shift={(1,0,0)}] at (p2-east) {RightBandedBox={name=fc,caption=FC,%
+				xlabel={{"1","5760"}, {"1","fc1\_nodes"}},fill=\FcColor,bandfill=\ConvReluColor,%
+				height=30,width={4.5,4.5},depth=30}};
+		
+		% Softmax
+		\pic[shift={(1,0,0)}] at (fc-east) {Box={name=softmax,caption=softmax,%
+				xlabel={{"num\_classes","dummy"}},fill=\SoftmaxColor,%
+				height=30,width=2,depth=30}};
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Draw connections
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\draw [connection]  (p1-east)    -- node {\midarrow} (cr2-west);
+		\draw [connection]  (p2-east)    -- node {\midarrow} (fc-west);
+		\draw [connection]  (fc-east)    -- node {\midarrow} (softmax-west);
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\end{tikzpicture}
+\end{document}

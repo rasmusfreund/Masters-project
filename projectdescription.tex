@@ -1,0 +1,34 @@
+\documentclass[english,12pt,a4paper,notitlepage]{report}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{babel}
+\usepackage{microtype}
+\title{Project description for Master's thesis}
+\author{Rasmus Freund}
+\begin{document}
+	\maketitle
+	
+	\section*{Project title}
+	Utilizing Deep Learning for Rapid Antimicrobial Resistance Detection in Bacteria Using MALDI-TOF Mass Spectra
+	
+	\section*{Project description}
+	Rapid and accurate detection of antimicrobial resistance (AMR) in bacterial pathogens is a crucial challenge in modern medicine. Current culture-based AMR testing methods are time-consuming, often taking up to 72 hours to yield results, which can delay effective treatment.
+	
+	This project aims to leverage the capabilities of deep learning, specifically convolutional neural networks (CNNs), to predict antimicrobial resistance directly from MALDI-TOF (Matrix-Assisted Laser Desorption/Ionization-Time of Flight) mass spectra profiles of clinical bacterial isolates. 
+	
+	Utilizing data from the comprehensive Database of Resistance Information on Antimicrobials and MALDI-TOF Mass Spectra (DRIAMS), this project aims not only to train CNNs to differentiate between susceptible and resistant bacterial strains, but also to delve into the underlying explanatory signals within the MALDI-TOF spectra that correlate with resistance. This deep analysis seeks to identify spectral indicators of resistance, potentially leading to novel insights into the mechanisms of AMR. The analysis might be stratified by bacterial species, allowing for a more nuanced understanding of species-specific resistance markers.
+	\newpage
+	
+	\section*{Activity plan}
+	\begin{itemize}
+		\item Week 1 - 2: literature reading, data acquisition, and data wrangling
+		\item Week 3 - 4: data wrangling, determining initial CNN architecture, and initial network coding
+		\item Week 5 - 6: coding network, decision on loss function, hyper-parameter tuning
+		\item Week 7 - 8: continued hyper-parameter tuning, setting up experiments for validation
+		\item Week 9 - 10: further coding of experiments, possibly initial writing on thesis
+		\item Week 11 - 12: finalizing experiments and getting results; writing thesis
+		\item Week 13 - 14: writing thesis
+	\end{itemize}
+	
+\end{document}
