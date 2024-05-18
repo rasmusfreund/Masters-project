@@ -19,6 +19,7 @@
 \usepackage{xcolor} % Kind of self-explanatory... Handles colors
 \usepackage{graphicx} % Handling graphics
 \usepackage{fancyhdr} % Increased control over headers and footers
+\usepackage{caption}
 
 % ------Package suggestions------
 \usepackage[backend=biber, style=numeric-comp, sorting=none]{biblatex} % Management of bibliography
@@ -166,6 +167,7 @@
 	\kant[1]
 \end{abstract}
 
+\captionsetup{font=small}
 
 \section*{Introduction}
 Antimicrobial resistance (AMR) presents one of the most daunting challenges in global public health, threatening to render ineffective the very drugs designed to protect us from bacterial infections. The pervasiveness and impact of AMR are profound, as bacteria continue to evolve mechanisms to survive against antibiotics, which have historically revolutionized the management of infectious diseases. 
@@ -192,8 +194,8 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 		\item \textbf{Reinforcement Learning}: In reinforcement learning, an agent learns to make decisions by performing actions in an environment to maximize cumulative reward. The agent, which can be a software program or a robot, interacts with the environment by taking actions and receiving feedback in the form of rewards or penalties. This feedback helps the agent learn the optimal strategy to achieve its goals over time \cite{suttonReinforcementLearningIntroduction}. While reinforcement learning represents a significant area of ML research, it is not utilized in this thesis. Its mention here serves to provide a comprehensive overview of the main types of machine learning.
 	\end{itemize}
 	
-	\subsection*{Ridge Regression}
-	Ridge Regression, also known as Tikhonov regularization, is a type of linear regression that includes a regularization term to prevent overfitting. Overfitting occurs when a model is too complex and captures noise in the training data, leading to poor generalization on unseen data. Ridge Regression addresses this issue by adding a penalty term to the least squares objective function.
+	\subsection*{Regularized Linear Regression: Ridge and LASSO}
+	Regularized linear regression techniques, such Ridge and LASSO (short for Least Absolute Shrinkage and Selection Operator), address overfitting by introducing a penalty term to the least squares objective function. Overfitting occurs when a model is too complex and captures noise in the training data, leading to poor generalization on unseen data. These methods are particularly useful in high-dimensional scenarios, where they can improve generalization and perform feature selection.
 	
 	\subsubsection*{Mathematical Formulation}
 	In standard linear regression, the objective is to minimize the sum of squared residuals:
@@ -206,22 +208,123 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	\begin{equation}
 		\min_\beta \left[\sum_{i=1}^{n}(y_i - X_i\beta)^2 + \lambda \sum_{j=1}^{p}\beta_{j}^{2}\right]
 	\end{equation}
-	Here, $\lambda$ is the regularization parameter that controls the strength of the penalty. When $\lambda$ is zero, Ridge Regression reduces to ordinary least squares (OLS) regression. As $\lambda$ increases, the coefficients $\beta$ shrink towards zero, which can reduce variance and improve the model's ability to generalize to new data \cite{hoerlRidgeRegressionBiased1970,hastieElementsStatisticalLearning2009} (see Figure \ref{fig:ridgelambdaeffect}).
+	Here, $\sum_{j=1}^{p}\beta_{j}^{2}$ represents the L2 norm (Euclidean norm) of the coefficients, which is the sum of the squared values of the coefficients. The L2 norm penalizes large coefficients, encouraging them to be small but not necessarily zero.
 	
-	\begin{figure}[t]
-		\centering
-		\includegraphics[width=1.0\linewidth]{img/ridge_lambda_effect}
-		\caption{Ridge Regression Coefficients and the Effect of Regularization. The \textbf{top plot} shows Ridge Regression coefficients as a function of the regularization parameter $\lambda$. Each line represents a different feature's coefficient, demonstrating how increasing $\lambda$ causes the coefficients to shrink towards zero. The \textbf{bottom plot} illustrates the effect of $\lambda$ on the fitted non-linear model for 10 data points. As $\lambda$ increases, the model transitions from overfitting (high variance) to better generalization (low variance), as seen by the smoothing of the fitted lines.}
-		\label{fig:ridgelambdaeffect}
-	\end{figure}
-	
+	LASSO Regression, on the other hand, adds a regularization term that penalizes the absolute values of the coefficients:
+	\begin{equation}
+		\min_\beta \left[\sum_{i=1}^{n}(y_i - X_i\beta)^2 + \lambda \sum_{j=1}^{p}|\beta_{j}|\right]
+	\end{equation}
+	Here, $\sum_{j=1}^{p}|\beta_{j}|$ represents the L1 norm (Manhattan norm) of the coefficients, which is the sum of the absolute values of the coefficients. The L1 norm can drive some coefficients to exactly zero, performing feature selection.
 	
 	\subsubsection*{Properties and Benefits}
 	\begin{itemize}
-		\item \textbf{Bias-Variance Tradeoff}: By introducing the penalty term, Ridge Regression can reduce the variance of the model at the cost of introducing some bias. This tradeoff can lead to better generalization performance compared to OLS, especially when dealing with high-dimensional data \cite{sohilIntroductionStatisticalLearning2022}.
-		\item \textbf{Handling Multicollinearity}: Multicollinearity occurs when input features are highly correlated, making it difficult to estimate their individual effects. Ridge Regression mitigates this issue by shrinking the coefficients, thus providing more stable estimates \cite{hoerlRidgeRegressionBiased1970, marquardtRidgeRegressionPractice1975}.
+		\item \textbf{Bias-Variance Tradeoff}: Both Ridge and LASSO introduce bias by shrinking the coefficients, but this can reduce the model's variance and improve generalization performance \cite{sohilIntroductionStatisticalLearning2022} (see Figures \ref{fig:ridgelambdaeffect} and \ref{fig:lassolambdaeffect}).
+		\item \textbf{Handling Multicollinearity (Ridge)}: Ridge Regression mitigates multicollinearity (high level of correlation between several input features) by shrinking coefficients, thus providing more stable estimates \cite{hoerlRidgeRegressionBiased1970,marquardtRidgeRegressionPractice1975}.
+		\item \textbf{Feature Selection (LASSO)}: LASSO can shrink some coefficients to exactly zero, thus performing feature selection and simplifying the model. This is particularly beneficial in high-dimensional datasets \cite{tibshiraniRegressionShrinkageSelection1996}.
 	\end{itemize}
 	
+	To effectively apply Ridge and LASSO regression, it is crucial to select the appropriate regularization parameter \( \lambda \) - cross-validation is a robust technique for determining an optimal value \cite{sohilIntroductionStatisticalLearning2022}. This process involves:
+	\begin{enumerate}
+		\item \textbf{Splitting the data}: Divide the dataset into \( k \) folds (e.g., \( k = 5 \) or \( k = 10 \))
+		\item \textbf{Training and Validation}: Train the model on \( k - 1 \) folds and validate it on the remaining fold. This process is repeated \( k \) times, with each fold serving as the validation set once.
+		\item \textbf{Averaging Performance}: Calculate the average performance metric (e.g., mean squared error) across all \( k \) folds for different values of \( lambda \)
+		\item \textbf{Selecting} \( \lambda \): Choose the \( \lambda \) that minimizes the average validation error, ensuring the model generalizes well to unseen data
+	\end{enumerate}
+	
+	\subsection*{Elastic Net Regression}
+	Elastic Net Regression is a regularized regression technique that linearly combines the penalties of Ridge and LASSO. It is particularly useful when dealing with high-dimensional data where multicollinearity is present and when feature selection is necessary.
+	
+	\subsubsection*{Mathematical Formulation}
+	Elastic Net modifies the objective of standard linear regression by adding two regularization terms:
+	\begin{equation}
+		\min_\beta \left[\sum_{i=1}^{n}(y_i - X_i\beta)^2 + \lambda_1 \sum_{j=1}^{p}|\beta_{j}| + \lambda_2 \sum_{j=1}^{p}\beta_{j}^{2}\right]
+	\end{equation}
+	Here, $\lambda_1$ controls the LASSO penalty (L1 norm) and $\lambda_2$ controls the Ridge penalty (L2 norm). When both $\lambda_1$ and $\lambda_2$ are zero, Elastic Net reduces to OLS regression. By adjusting these parameters, Elastic Net can balance between the benefits of Ridge and LASSO, shrinking some coefficients while performing feature selection \cite{zouRegularizationVariableSelection2005}.
+	
+	\begin{figure}[!t]
+		\centering
+		\includegraphics[width=1.0\linewidth]{img/ridge_lambda_effect}
+		\caption{Ridge Regression Coefficients and the Effect of Regularization. \\ The \textbf{top plot} shows Ridge Regression coefficients as a function of the regularization parameter $\lambda$. Each line represents a different feature's coefficient, demonstrating how increasing $\lambda$ causes the coefficients to shrink towards zero. The \textbf{bottom plot} illustrates the effect of $\lambda$ on the fitted non-linear model for 10 data points (synthetic data). As $\lambda$ increases, the model transitions from overfitting (high variance) to better generalization (low variance), as seen by the smoothing of the fitted lines.}
+		\label{fig:ridgelambdaeffect}
+	\end{figure}
+	
+	\begin{figure}[!t]
+		\centering
+		\includegraphics[width=1.0\linewidth]{img/lasso_lambda_effect}
+		\caption{LASSO Regression Coefficients and the Effect of Regularization. \\ The \textbf{top plot} shows LASSO Regression coefficients as a function of the regularization parameter $\lambda$. Each line represents a different feature's coefficient, demonstrating how increasing $\lambda$ causes some coefficients to shrink to zero, effectively performing feature selection. The \textbf{bottom plot} illustrates the effect of $\lambda$ on the fitted non-linear model for 10 data points (synthetic data). As $\lambda$ increases, the model transitions from overfitting (high variance) to better generalization (low variance), as seen by the smoothing of the fitted lines.}
+		\label{fig:lassolambdaeffect}
+	\end{figure}
+	
+	\clearpage
+	
+	\subsection*{Random Forest}
+	Random Forest is an ensemble learning method used for both classification and regression tasks. It operates by constructing multiple decision trees during training, and outputting the mode of the classes (classification) or mean prediction (regression) of the individual trees. We will first explore how decision trees are created and move on to explaining the Random Forest method. Note that only the classification case will be explained, as this is the focus of the current work.
+	
+	\subsubsection*{Mathematical Formulation - Decision Trees}
+	A decision tree is a flowchart-like structure in which each internal node represents a feature, each branch represents a decision rule, and each leaf node represents an outcome. The path from the root to a leaf represents classification rules \cite{hastieElementsStatisticalLearning2009}. An example of a simple decision tree is shown in Figure \ref{fig:decisiontreevisualization}; the Gini impurity value in the tree will be explained in the text below.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\linewidth]{img/decision_tree}
+		\caption{Recursive Binary Splitting and Decision Tree Visualization. \\ This figure demonstrates the process of recursive binary splitting and the resulting decision tree on data that has two features: $X_1$ and $X_2$. The left plot shows the decision boundaries created by a decision tree trained on a synthetic dataset, illustrating how the feature space is recursively split into regions, as indicated by the dashed lines. The right plot visualizes the corresponding decision tree, with each internal node representing a decision rule based on feature thresholds, and leaf nodes representing class outcomes. Nodes are color-coded by the majority class, with class distributions and impurity measures (Gini index) displayed.}
+		\label{fig:decisiontreevisualization}
+	\end{figure}
+	
+	In constructing a decision tree, we aim to partition the feature space into regions where the response variable is as homogeneous as possible. This is done by recursively splitting the data based on certain criteria until a stopping condition is met.
+	
+	Given data that consists of \( p \) features and a response, for each of \( N \) observations \((x_i, y_i)\) for \( i = 1, 2, \ldots, N \), with \( x_i = (x_{i1}, x_{i2}, \ldots, x_{ip}) \), we model the response by partitioning the feature space into \( M \) regions \( R_1, R_2, \ldots, R_M \) and assigning class \( c_m \) to each region. The example in Figure \ref{fig:decisiontreevisualization} is split as follows:	
+	\begin{enumerate}
+		\item Feature 2 is split at \(X_2 = 0.26\) where the feature space at or below this point is assigned to class 0.
+		\item Feature 1 is now split at \(X_1 = 1.459\).
+		\item Finally, feature 1 is again split, now at \(X_1 = -1.043\).
+	\end{enumerate}
+	
+	As visualized, this creates four regions in the feature space, which allows us to model the response as:
+	\begin{equation}
+		\hat{f}(x) = \sum_{m=1}^{4} c_m I(x \in R_m)
+	\end{equation}
+	where \( c_m \) is the class assigned to each region, and \( I(\cdots) \) is the indicator function, which is 1 if \( x \) is in region \( R_m \), and 0 otherwise. Since the data has only two classes, \( c_m \) will be either class 0 or class 1 for each region.
+	
+	But how do we decide where to split along each of the features? This is where we get into the splitting criterion, where there are two popular methods for classification tasks:
+	
+	\begin{itemize}
+		\item \textbf{Gini impurity}:
+		\begin{equation}
+			G = \sum_{i=1}^{C}p_i(1-p_i)
+		\end{equation}
+		where $p_i$ is the probability of class $i$ in the node. This measures how often a randomly chosen element would be incorrectly classified.
+		\item \textbf{Entropy}:
+		\begin{equation}
+			H = -\sum_{i=1}^{C}p_i\log(p_i)
+		\end{equation}
+		This measures the disorder or randomness of the data points in the node.
+	\end{itemize}
+	Since it is preferable to minimize both the Gini impurity and the entropy, the following step works for either criterion. Consider a feature \( j \) and a split point \( s \), and define the regions:
+	\begin{equation}
+		R_1(j, s) = \{X|X_j \leq s\}\ \text{and}\ R_2(j, s) = \{X|X_j > s\}
+	\end{equation}
+	
+	The goal is then to find a \( j \) and \( s \) that minimize the function:
+	\begin{equation}
+		\min_{j,s} \left[\frac{N_{R_1}}{N}C_{R_1} + \frac{N_{R_2}}{N}C_{R_2}\right]
+	\end{equation}
+	where \( N_{R_1} \) and \( N_{R_2} \) are the number of samples in \( R_1 \) and \( R_2 \), and \( C_{R_1} \) and \( C_{R_2} \) is the splitting criterion value of these regions.
+	
+	After finding the best split, we now assign the class label for each region \( R_m \) as the majority class in that region:
+	\begin{equation}
+		c_m = \arg \max_k \sum_{x_i \in R_m} I(y_i = k)
+	\end{equation}
+	that is, the class label assigned for a given region is the class that appears most frequently within that region \cite{hastieElementsStatisticalLearning2009,sohilIntroductionStatisticalLearning2022}.
+	
+	Utilizing the functions mentioned so far for producing a decision tree could, however, lead to a problematic situation. One way to optimize the tree would be to grow it deep enough to assign each data point to its own node, resulting in an overly complex model. To prevent this, several methods can be employed:
+	\begin{itemize}
+		\item \textbf{Maximum depth}: Directly limit how deep the tree is allowed to grow.
+		\item \textbf{Minimum samples per leaf}: Require a minimum number of samples in each leaf to avoid splits that result in nodes with very few data points.
+		\item \textbf{Minimum samples per split}: Require a minimum number of samples to be present at a node before it can be split further.
+		\item \textbf{Maximum leaf nodes}: Limit the number of leaf nodes in the tree to prevent excessive growth.
+	\end{itemize}
+	
+	Once again, determining the optimal value for these hyperparameters is typically done through cross-validation.
 	
 	
 \section*{Methods}
