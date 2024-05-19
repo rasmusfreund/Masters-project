@@ -2382,11 +2382,19 @@
     <bcf:citekey order="5" intorder="1">jordanMachineLearningTrends2015</bcf:citekey>
     <bcf:citekey order="6" intorder="1">ghahramaniProbabilisticMachineLearning2015</bcf:citekey>
     <bcf:citekey order="7" intorder="1">suttonReinforcementLearningIntroduction</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">hoerlRidgeRegressionBiased1970</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">friedmanRegularizationPathsGeneralized2010</bcf:citekey>
     <bcf:citekey order="8" intorder="2">hastieElementsStatisticalLearning2009</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">hoerlRidgeRegressionBiased1970</bcf:citekey>
-    <bcf:citekey order="10" intorder="2">marquardtRidgeRegressionPractice1975</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">whitlockAnalysisBiologicalData2015</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">hoerlRidgeRegressionBiased1970</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">marquardtRidgeRegressionPractice1975</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">tibshiraniRegressionShrinkageSelection1996</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">zouRegularizationVariableSelection2005</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="16" intorder="2">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">moodIntroductionTheoryStatistics1973</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

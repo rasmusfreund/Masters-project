@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import Ridge
 from sklearn.preprocessing import StandardScaler, PolynomialFeatures
 
+plt.rcParams.update({'font.size': 14})
+
 np.random.seed(0)
 n_samples = 10
 X = np.linspace(0, 10, n_samples).reshape(-1, 1)
@@ -43,10 +45,14 @@ for idx, alpha in enumerate(lambdas_to_plot):
     y_fit = ridge.predict(scaler.transform(X_fit_poly))
     ax2.plot(X_fit, y_fit, label=r'$\lambda$' + f' = {alpha}', color=colors[idx*3 % len(colors)])
 ax2.scatter(X, y, color='black', label='Data points')
-ax2.set_xlabel('X')
-ax2.set_ylabel('y')
+ax2.set_xlabel('Feature Value')
+ax2.set_ylabel('Target Value')
 ax2.set_title('Effect of Increasing Regularization on Fitted Line')
 ax2.legend()
 
+
+save_path = "/mnt/c/Users/rasmu/Desktop/Bioinformatics/MSc/Thesis/img/ridge_lambda_effect.png"
+
 plt.tight_layout()
+plt.savefig(save_path, dpi=300)
 plt.show()

@@ -1291,45 +1291,61 @@
       \verb http://incompleteideas.net/book/the-book-2nd.html
       \endverb
     \endentry
-    \entry{hoerlRidgeRegressionBiased1970}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=073bf156684ab93b481fb9a5dd6a82c7}{%
-           family={Hoerl},
+    \entry{friedmanRegularizationPathsGeneralized2010}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=971cf69058b64a94326dea0f2a8bbcce}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
            familyi={H\bibinitperiod},
-           given={Arthur\bibnamedelima E},
-           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=39f4e06a9e51f345e243e2b24175e7e4}{%
-           family={Kennard},
-           familyi={K\bibinitperiod},
-           given={Robert\bibnamedelima W},
-           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{5ca383125b65b015cb46067f1150f462}
-      \strng{fullhash}{5ca383125b65b015cb46067f1150f462}
-      \strng{fullhashraw}{5ca383125b65b015cb46067f1150f462}
-      \strng{bibnamehash}{5ca383125b65b015cb46067f1150f462}
-      \strng{authorbibnamehash}{5ca383125b65b015cb46067f1150f462}
-      \strng{authornamehash}{5ca383125b65b015cb46067f1150f462}
-      \strng{authorfullhash}{5ca383125b65b015cb46067f1150f462}
-      \strng{authorfullhashraw}{5ca383125b65b015cb46067f1150f462}
+      \strng{namehash}{568e7b5149c552567af3c9b520d96bb3}
+      \strng{fullhash}{568e7b5149c552567af3c9b520d96bb3}
+      \strng{fullhashraw}{568e7b5149c552567af3c9b520d96bb3}
+      \strng{bibnamehash}{568e7b5149c552567af3c9b520d96bb3}
+      \strng{authorbibnamehash}{568e7b5149c552567af3c9b520d96bb3}
+      \strng{authornamehash}{568e7b5149c552567af3c9b520d96bb3}
+      \strng{authorfullhash}{568e7b5149c552567af3c9b520d96bb3}
+      \strng{authorfullhashraw}{568e7b5149c552567af3c9b520d96bb3}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Technometrics}
+      \field{abstract}{We develop fast algorithms for estimation of generalized linear models with convex penalties. The models include linear regression, two-class logistic regression, and multinomial regression problems while the penalties include 1 (the lasso), 2 (ridge regression) and mixtures of the two (the elastic net). The algorithms use cyclical coordinate descent, computed along a regularization path. The methods can handle large problems and can also deal efficiently with sparse features. In comparative timings we find that the new algorithms are considerably faster than competing methods.}
+      \field{issn}{1548-7660}
+      \field{journaltitle}{Journal of Statistical Software}
       \field{langid}{english}
       \field{number}{1}
-      \field{title}{Ridge {{Regression}}: {{Biased Estimation}} for {{Nonorthogonal Problems}}}
-      \field{volume}{12}
-      \field{year}{1970}
+      \field{shortjournal}{J. Stat. Soft.}
+      \field{title}{Regularization {{Paths}} for {{Generalized Linear Models}} via {{Coordinate Descent}}}
+      \field{urlday}{18}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{33}
+      \field{year}{2010}
       \field{dateera}{ce}
-      \field{pages}{55\bibrangedash 67}
-      \range{pages}{13}
+      \field{urldateera}{ce}
       \verb{doi}
-      \verb 10.2307/1267351
+      \verb 10.18637/jss.v033.i01
       \endverb
       \verb{file}
-      \verb C:\Users\rasmu\Zotero\storage\3H8DVSQ6\Hoerl and Kennard - Ridge Regression Biased Estimation for Nonorthogo.pdf
+      \verb C:\Users\rasmu\Zotero\storage\38B5BIMU\Friedman et al. - 2010 - Regularization Paths for Generalized Linear Models.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.jstatsoft.org/v33/i01/
+      \endverb
+      \verb{url}
+      \verb http://www.jstatsoft.org/v33/i01/
       \endverb
     \endentry
     \entry{hastieElementsStatisticalLearning2009}{book}{}{}
@@ -1391,6 +1407,45 @@
       \verb http://link.springer.com/10.1007/978-0-387-84858-7
       \endverb
     \endentry
+    \entry{whitlockAnalysisBiologicalData2015}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=893c048143809c36ed70bf9aeb1c64a5}{%
+           family={Whitlock},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=dd0219b23f62351765abf3c4a9abadc0}{%
+           family={Schluter},
+           familyi={S\bibinitperiod},
+           given={Dolph},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Macmillan Education}%
+      }
+      \strng{namehash}{394c1d8836d13b63e2fbdcc94c0fff86}
+      \strng{fullhash}{394c1d8836d13b63e2fbdcc94c0fff86}
+      \strng{fullhashraw}{394c1d8836d13b63e2fbdcc94c0fff86}
+      \strng{bibnamehash}{394c1d8836d13b63e2fbdcc94c0fff86}
+      \strng{authorbibnamehash}{394c1d8836d13b63e2fbdcc94c0fff86}
+      \strng{authornamehash}{394c1d8836d13b63e2fbdcc94c0fff86}
+      \strng{authorfullhash}{394c1d8836d13b63e2fbdcc94c0fff86}
+      \strng{authorfullhashraw}{394c1d8836d13b63e2fbdcc94c0fff86}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second edition}
+      \field{isbn}{978-1-319-15421-9}
+      \field{langid}{english}
+      \field{pagetotal}{818}
+      \field{title}{The Analysis of Biological Data}
+      \field{year}{2015}
+      \field{dateera}{ce}
+    \endentry
     \entry{sohilIntroductionStatisticalLearning2022}{article}{}{}
       \name{author}{3}{}{%
         {{hash=1f8844c533a6a15f836abbd3c94bf62a}{%
@@ -1417,8 +1472,8 @@
       \strng{authornamehash}{d71cb97be1a3513ef56f0c91520ca874}
       \strng{authorfullhash}{d71cb97be1a3513ef56f0c91520ca874}
       \strng{authorfullhashraw}{d71cb97be1a3513ef56f0c91520ca874}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{day}{2}
@@ -1450,6 +1505,47 @@
       \endverb
       \verb{url}
       \verb https://www.tandfonline.com/doi/full/10.1080/24754269.2021.1980261
+      \endverb
+    \endentry
+    \entry{hoerlRidgeRegressionBiased1970}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=073bf156684ab93b481fb9a5dd6a82c7}{%
+           family={Hoerl},
+           familyi={H\bibinitperiod},
+           given={Arthur\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=39f4e06a9e51f345e243e2b24175e7e4}{%
+           family={Kennard},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{fullhash}{5ca383125b65b015cb46067f1150f462}
+      \strng{fullhashraw}{5ca383125b65b015cb46067f1150f462}
+      \strng{bibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorbibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authornamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorfullhash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorfullhashraw}{5ca383125b65b015cb46067f1150f462}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Technometrics}
+      \field{langid}{english}
+      \field{number}{1}
+      \field{title}{Ridge {{Regression}}: {{Biased Estimation}} for {{Nonorthogonal Problems}}}
+      \field{volume}{12}
+      \field{year}{1970}
+      \field{dateera}{ce}
+      \field{pages}{55\bibrangedash 67}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.2307/1267351
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\3H8DVSQ6\Hoerl and Kennard - Ridge Regression Biased Estimation for Nonorthogo.pdf
       \endverb
     \endentry
     \entry{marquardtRidgeRegressionPractice1975}{article}{}{}
@@ -1493,6 +1589,159 @@
       \verb{file}
       \verb C:\Users\rasmu\Zotero\storage\PXRCYK2U\Marquardt and Snee - 2024 - Ridge Regression in Practice.pdf
       \endverb
+    \endentry
+    \entry{tibshiraniRegressionShrinkageSelection1996}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{fullhash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{fullhashraw}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{bibnamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorbibnamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authornamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorfullhash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorfullhashraw}{88eea600247d798f8b2ce0b2dc614492}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a new method for estimation in linear models. The 'lasso' minim residual sum of squares subject to the sum of the absolute value of the coefficients than a constant. Because of the nature of this constraint it tends to produce coefficients that are exactly 0 and hence gives interpretable models. Our simulatio suggest that the lasso enjoys some of the favourable properties of both subset sele ridge regression. It produces interpretable models like subset selection and exh stability of ridge regression. There is also an interesting relationship with recent adaptive function estimation by Donoho and Johnstone. The lasso idea is quite ge can be applied in a variety of statistical models: extensions to generalized regressio and tree-based models are briefly described.}
+      \field{day}{1}
+      \field{issn}{1369-7412, 1467-9868}
+      \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Regression {{Shrinkage}} and {{Selection Via}} the {{Lasso}}}
+      \field{urlday}{17}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{58}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{267\bibrangedash 288}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1111/j.2517-6161.1996.tb02080.x
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\J9TBZWVB\Tibshirani - 1996 - Regression Shrinkage and Selection Via the Lasso.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://academic.oup.com/jrsssb/article/58/1/267/7027929
+      \endverb
+      \verb{url}
+      \verb https://academic.oup.com/jrsssb/article/58/1/267/7027929
+      \endverb
+    \endentry
+    \entry{zouRegularizationVariableSelection2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f15b129e88b4820c7ed982265e79986b}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c346171da05683239c65d0053413406e}
+      \strng{fullhash}{c346171da05683239c65d0053413406e}
+      \strng{fullhashraw}{c346171da05683239c65d0053413406e}
+      \strng{bibnamehash}{c346171da05683239c65d0053413406e}
+      \strng{authorbibnamehash}{c346171da05683239c65d0053413406e}
+      \strng{authornamehash}{c346171da05683239c65d0053413406e}
+      \strng{authorfullhash}{c346171da05683239c65d0053413406e}
+      \strng{authorfullhashraw}{c346171da05683239c65d0053413406e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose the elastic net, a new regularization and variable selection method. Real world data and a simulation study show that the elastic net often outperforms the lasso, while enjoying a similar sparsity of representation. In addition, the elastic net encourages a grouping effect, where strongly correlated predictors tend to be in or out of the model together. The elastic net is particularly useful when the number of predictors (p) is much bigger than the number of observations (n). By contrast, the lasso is not a very satisfactory variable selection method in the p n case. An algorithm called LARS-EN is proposed for computing elastic net regularization paths efficiently, much like algorithm LARS does for the lasso.}
+      \field{day}{1}
+      \field{issn}{1369-7412, 1467-9868}
+      \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{2}
+      \field{title}{Regularization and {{Variable Selection Via}} the {{Elastic Net}}}
+      \field{urlday}{17}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{67}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{301\bibrangedash 320}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1111/j.1467-9868.2005.00503.x
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\7ADHVTEH\Zou and Hastie - 2005 - Regularization and Variable Selection Via the Elas.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://academic.oup.com/jrsssb/article/67/2/301/7109482
+      \endverb
+      \verb{url}
+      \verb https://academic.oup.com/jrsssb/article/67/2/301/7109482
+      \endverb
+    \endentry
+    \entry{moodIntroductionTheoryStatistics1973}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=b819a06fef6c3c2e042f22377a2bce41}{%
+           family={Mood},
+           familyi={M\bibinitperiod},
+           given={Alexander\bibnamedelima McFarlane},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=6bb4d5c16f803670e615d13733e4bfd5}{%
+           family={Graybill},
+           familyi={G\bibinitperiod},
+           given={Franklin\bibnamedelima A.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=cc1cfd007ae25d0a0f673dc705fb0ae8}{%
+           family={Boes},
+           familyi={B\bibinitperiod},
+           given={Duane\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{c8d2b05fa88b9119a37a34bf77627671}
+      \strng{fullhash}{c8d2b05fa88b9119a37a34bf77627671}
+      \strng{fullhashraw}{c8d2b05fa88b9119a37a34bf77627671}
+      \strng{bibnamehash}{c8d2b05fa88b9119a37a34bf77627671}
+      \strng{authorbibnamehash}{c8d2b05fa88b9119a37a34bf77627671}
+      \strng{authornamehash}{c8d2b05fa88b9119a37a34bf77627671}
+      \strng{authorfullhash}{c8d2b05fa88b9119a37a34bf77627671}
+      \strng{authorfullhashraw}{c8d2b05fa88b9119a37a34bf77627671}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3d ed}
+      \field{isbn}{978-0-07-042864-5}
+      \field{pagetotal}{564}
+      \field{series}{{{McGraw-Hill}} Series in Probability and Statistics}
+      \field{title}{Introduction to the Theory of Statistics}
+      \field{year}{1973}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\RMPFCG7I\intro_to_the_theory_of_statistics.pdf
+      \endverb
+      \keyw{Mathematical statistics}
     \endentry
   \enddatalist
 \endrefsection

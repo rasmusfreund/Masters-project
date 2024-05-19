@@ -199,22 +199,57 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	
 	\subsubsection*{Mathematical Formulation}
 	In standard linear regression, the objective is to minimize the sum of squared residuals:
-	\begin{equation} 
+	\begin{equation*} 
 		\min_\beta \sum_{i=1}^{n}(y_i - X_i\beta)^2
-	\end{equation}
+	\end{equation*}
 	where $X$ is the matrix of input features, $y$ is the vector of target values, and $\beta$ is the vector of coefficients.
 	
 	Ridge Regression modifies the objective by adding a regularization term that penalizes large coefficients:
-	\begin{equation}
+	\begin{equation*}
 		\min_\beta \left[\sum_{i=1}^{n}(y_i - X_i\beta)^2 + \lambda \sum_{j=1}^{p}\beta_{j}^{2}\right]
-	\end{equation}
+	\end{equation*}
 	Here, $\sum_{j=1}^{p}\beta_{j}^{2}$ represents the L2 norm (Euclidean norm) of the coefficients, which is the sum of the squared values of the coefficients. The L2 norm penalizes large coefficients, encouraging them to be small but not necessarily zero.
 	
 	LASSO Regression, on the other hand, adds a regularization term that penalizes the absolute values of the coefficients:
-	\begin{equation}
+	\begin{equation*}
 		\min_\beta \left[\sum_{i=1}^{n}(y_i - X_i\beta)^2 + \lambda \sum_{j=1}^{p}|\beta_{j}|\right]
-	\end{equation}
+	\end{equation*}
 	Here, $\sum_{j=1}^{p}|\beta_{j}|$ represents the L1 norm (Manhattan norm) of the coefficients, which is the sum of the absolute values of the coefficients. The L1 norm can drive some coefficients to exactly zero, performing feature selection.
+	
+	Additionally, we can see that setting \( \lambda = 0 \) for either Ridge or LASSO reduces the respective expression to ordinary least squares (OLS) regression.
+	
+	\subsubsection*{Application to Classification}
+	While Ridge and LASSO are primarily used for regression tasks, they can be adapted for classification through logistic regression \cite{friedmanRegularizationPathsGeneralized2010,hastieElementsStatisticalLearning2009}. Logistic regression uses the logistic function to model the probability that a given input point belongs to a specific class:
+	\begin{equation*}
+		P(y=1|X) = \frac{1}{1 + e^{-X\beta}}
+	\end{equation*}
+	To fit a logistic regression model, we maximize the likelihood of the observed data. The likelihood function measures the probability of the observed labels given the input data and model parameters \cite{whitlockAnalysisBiologicalData2015}. For binary classification, the likelihood of the data is given by:
+	\begin{equation*}
+		L(\beta) = \prod_{i=1}^{n} P(y_i | X_i)
+	\end{equation*}
+	Taking the natural logarithm of the likelihood function, we obtain the log-likelihood:
+	\begin{equation*}
+		\log L(\beta) = \sum_{i=1}^{n} \left[ y_i \log P(y=1|X_i) + (1-y_i) \log (1 - P(y=1|X_i)) \right]
+	\end{equation*}
+	Maximizing the log-likelihood is equivalent to minimizing the negative log-likelihood (NLL), which measures the discrepancy between the observed labels (\( y_i \)) and the predicted probabilities (\( P(y = 1 | X_i )\)):
+	\begin{equation*}
+		\text{NLL}(\beta) = -\sum_{i=1}^{n} \left[ y_i \log P(y=1|X_i) + (1-y_i) \log (1 - P(y=1|X_i)) \right]
+	\end{equation*}
+	To regularize logistic regression, the NLL is combined with a penalty term, as shown below.
+	
+	\noindent
+	\textbf{Ridge Logistic Regression} \\
+	Adds an L2 penalty term to the negative log-likelihood:
+	\begin{equation*}
+		\min_{\beta} \left[ -\sum_{i=1}^{n} \left( y_i \log P(y=1|X_i) + (1-y_i) \log (1 - P(y=1|X_i)) \right) + \lambda \sum_{j=1}^{p}\beta_{j}^{2} \right]
+	\end{equation*}
+	
+	\noindent
+	\textbf{LASSO Logistic Regression} \\
+	Adds an L1 penalty term to the negative log-likelihood:
+	\begin{equation*}
+		\min_{\beta} \left[ -\sum_{i=1}^{n} \left( y_i \log P(y=1|X_i) + (1-y_i) \log (1 - P(y=1|X_i)) \right) + \lambda \sum_{j=1}^{p}|\beta_{j}| \right]
+	\end{equation*}
 	
 	\subsubsection*{Properties and Benefits}
 	\begin{itemize}
@@ -227,8 +262,8 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	\begin{enumerate}
 		\item \textbf{Splitting the data}: Divide the dataset into \( k \) folds (e.g., \( k = 5 \) or \( k = 10 \))
 		\item \textbf{Training and Validation}: Train the model on \( k - 1 \) folds and validate it on the remaining fold. This process is repeated \( k \) times, with each fold serving as the validation set once.
-		\item \textbf{Averaging Performance}: Calculate the average performance metric (e.g., mean squared error) across all \( k \) folds for different values of \( lambda \)
-		\item \textbf{Selecting} \( \lambda \): Choose the \( \lambda \) that minimizes the average validation error, ensuring the model generalizes well to unseen data
+		\item \textbf{Averaging Performance}: Calculate the average performance metric (e.g., mean squared error) across all \( k \) folds for different values of \( \lambda \)
+		\item \textbf{Selecting \( \lambda \)}: Choose the \( \lambda \) that minimizes the average validation error, ensuring the model generalizes well to unseen data
 	\end{enumerate}
 	
 	\subsection*{Elastic Net Regression}
@@ -236,9 +271,9 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	
 	\subsubsection*{Mathematical Formulation}
 	Elastic Net modifies the objective of standard linear regression by adding two regularization terms:
-	\begin{equation}
+	\begin{equation*}
 		\min_\beta \left[\sum_{i=1}^{n}(y_i - X_i\beta)^2 + \lambda_1 \sum_{j=1}^{p}|\beta_{j}| + \lambda_2 \sum_{j=1}^{p}\beta_{j}^{2}\right]
-	\end{equation}
+	\end{equation*}
 	Here, $\lambda_1$ controls the LASSO penalty (L1 norm) and $\lambda_2$ controls the Ridge penalty (L2 norm). When both $\lambda_1$ and $\lambda_2$ are zero, Elastic Net reduces to OLS regression. By adjusting these parameters, Elastic Net can balance between the benefits of Ridge and LASSO, shrinking some coefficients while performing feature selection \cite{zouRegularizationVariableSelection2005}.
 	
 	\begin{figure}[!t]
@@ -258,15 +293,15 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	\clearpage
 	
 	\subsection*{Random Forest}
-	Random Forest is an ensemble learning method used for both classification and regression tasks. It operates by constructing multiple decision trees during training, and outputting the mode of the classes (classification) or mean prediction (regression) of the individual trees. We will first explore how decision trees are created and move on to explaining the Random Forest method. Note that only the classification case will be explained, as this is the focus of the current work.
+	Random Forest is an ensemble learning method used for both classification and regression tasks. It operates by constructing multiple decision trees during training, and outputting the mode of the classes (classification) or mean prediction (regression) of the individual trees. We will first explore how decision trees are created and move on to understanding the Random Forest method. Note that only the classification case will be explained, as this is the focus of the current work.
 	
-	\subsubsection*{Mathematical Formulation - Decision Trees}
-	A decision tree is a flowchart-like structure in which each internal node represents a feature, each branch represents a decision rule, and each leaf node represents an outcome. The path from the root to a leaf represents classification rules \cite{hastieElementsStatisticalLearning2009}. An example of a simple decision tree is shown in Figure \ref{fig:decisiontreevisualization}; the Gini impurity value in the tree will be explained in the text below.
+	\subsubsection*{Decision Trees}
+	A decision tree is a flowchart-like structure in which each internal node represents a feature, each branch represents a decision rule, and each leaf node represents an outcome. The path from the root to a leaf represents classification rules \cite{hastieElementsStatisticalLearning2009}. An example of a simple decision tree is shown in Figure \ref{fig:decisiontreevisualization}A; the Gini impurity value shown in the tree will be explained in the text below.
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{img/decision_tree}
-		\caption{Recursive Binary Splitting and Decision Tree Visualization. \\ This figure demonstrates the process of recursive binary splitting and the resulting decision tree on data that has two features: $X_1$ and $X_2$. The left plot shows the decision boundaries created by a decision tree trained on a synthetic dataset, illustrating how the feature space is recursively split into regions, as indicated by the dashed lines. The right plot visualizes the corresponding decision tree, with each internal node representing a decision rule based on feature thresholds, and leaf nodes representing class outcomes. Nodes are color-coded by the majority class, with class distributions and impurity measures (Gini index) displayed.}
+		\caption{Recursive Binary Splitting and Decision Tree Visualization. \\ This figure demonstrates the process of recursive binary splitting and the resulting decision tree on data that has two features: $X_1$ and $X_2$. The left plot (A) shows the decision boundaries created by a decision tree trained on a synthetic dataset, illustrating how the feature space is recursively split into regions, as indicated by the dashed lines. The right plot (B) visualizes the corresponding decision tree, with each internal node representing a decision rule based on feature thresholds, and leaf nodes representing class outcomes. Nodes are color-coded by the majority class, with class distributions and impurity measures (Gini index) displayed.}
 		\label{fig:decisiontreevisualization}
 	\end{figure}
 	
@@ -280,40 +315,40 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	\end{enumerate}
 	
 	As visualized, this creates four regions in the feature space, which allows us to model the response as:
-	\begin{equation}
+	\begin{equation*}
 		\hat{f}(x) = \sum_{m=1}^{4} c_m I(x \in R_m)
-	\end{equation}
+	\end{equation*}
 	where \( c_m \) is the class assigned to each region, and \( I(\cdots) \) is the indicator function, which is 1 if \( x \) is in region \( R_m \), and 0 otherwise. Since the data has only two classes, \( c_m \) will be either class 0 or class 1 for each region.
 	
 	But how do we decide where to split along each of the features? This is where we get into the splitting criterion, where there are two popular methods for classification tasks:
 	
 	\begin{itemize}
 		\item \textbf{Gini impurity}:
-		\begin{equation}
+		\begin{equation*}
 			G = \sum_{i=1}^{C}p_i(1-p_i)
-		\end{equation}
+		\end{equation*}
 		where $p_i$ is the probability of class $i$ in the node. This measures how often a randomly chosen element would be incorrectly classified.
 		\item \textbf{Entropy}:
-		\begin{equation}
+		\begin{equation*}
 			H = -\sum_{i=1}^{C}p_i\log(p_i)
-		\end{equation}
+		\end{equation*}
 		This measures the disorder or randomness of the data points in the node.
 	\end{itemize}
 	Since it is preferable to minimize both the Gini impurity and the entropy, the following step works for either criterion. Consider a feature \( j \) and a split point \( s \), and define the regions:
-	\begin{equation}
+	\begin{equation*}
 		R_1(j, s) = \{X|X_j \leq s\}\ \text{and}\ R_2(j, s) = \{X|X_j > s\}
-	\end{equation}
+	\end{equation*}
 	
 	The goal is then to find a \( j \) and \( s \) that minimize the function:
-	\begin{equation}
+	\begin{equation*}
 		\min_{j,s} \left[\frac{N_{R_1}}{N}C_{R_1} + \frac{N_{R_2}}{N}C_{R_2}\right]
-	\end{equation}
+	\end{equation*}
 	where \( N_{R_1} \) and \( N_{R_2} \) are the number of samples in \( R_1 \) and \( R_2 \), and \( C_{R_1} \) and \( C_{R_2} \) is the splitting criterion value of these regions.
 	
 	After finding the best split, we now assign the class label for each region \( R_m \) as the majority class in that region:
-	\begin{equation}
+	\begin{equation*}
 		c_m = \arg \max_k \sum_{x_i \in R_m} I(y_i = k)
-	\end{equation}
+	\end{equation*}
 	that is, the class label assigned for a given region is the class that appears most frequently within that region \cite{hastieElementsStatisticalLearning2009,sohilIntroductionStatisticalLearning2022}.
 	
 	Utilizing the functions mentioned so far for producing a decision tree could, however, lead to a problematic situation. One way to optimize the tree would be to grow it deep enough to assign each data point to its own node, resulting in an overly complex model. To prevent this, several methods can be employed:
@@ -326,6 +361,39 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	
 	Once again, determining the optimal value for these hyperparameters is typically done through cross-validation.
 	
+	\subsubsection*{Random Forest}
+	Building on the foundation of decision trees, Random Forest enhances the model's performance by combining multiple decision trees to form an ensemble. Each tree in the Random Forest is built using a bootstrap sample of the data, and at each split, a random subset of features is considered for splitting. The randomness helps in creating diverse trees that reduce the overall variance of the model.
+	
+	The Random Forest algorithm involves the following steps:
+	\begin{enumerate}
+		\item \textbf{Bootstrap sampling}: Randomly sample the dataset with replacement to create multiple bootstrap samples. Each tree is trained on a different bootstrap sample, introducing variability in the training data.
+		\item \textbf{Tree construction}: For each bootstrap sample, grow a decision tree using a random subset of features at each split. This random selection of features further decorrelates the trees.
+		\item \textbf{Aggregation}: Aggregate the predictions of all the trees to make the final prediction. For classification, the mode of the predicted classes is used.
+	\end{enumerate}
+	
+	One might notice the aggressive attempt at decorrelating different trees in Random Forests. The reason for this is that if we can successfully create an ensemble of decorrelated trees, the variance of the model is reduced significantly more than if the trees are correlated. To understand this, consider \( n \) uncorrelated random variables \( X_1, X_2, \ldots, X_n \), each with the same variance \( \sigma^2 \). The variance of the sum of these variables is the sum of their variances \cite{moodIntroductionTheoryStatistics1973}. Mathematically:
+	\begin{equation*}
+		\text{Var}\left(\frac{1}{n} \sum_{i=1}^{n} X_i \right) = \frac{1}{n^2} \sum_{i=1}^{n} \text{Var}(X_i)
+	\end{equation*}
+	Simplifying:
+	\begin{equation*}
+		\frac{1}{n^2} \sum_{i=1}^{n} \text{Var}(X_i) = \frac{1}{n^2} \sum_{i=1}^{n} \sigma^2 = \frac{\sigma^2}{n}
+	\end{equation*}
+	Thus, the variance of the average of uncorrelated random variables decreases proportionally to \( \frac{1}{n} \).
+	
+	Now, if we instead consider \( n \) random variables \( X_1, X_2, \ldots, X_n \) that are highly correlated, let \( \rho \) represent the average correlation coefficient between any two variables.  For correlated variables, the covariance \( \text{Cov}(X_i, X_j) \) for \( i \neq j \) is \( \rho \sigma^2 \). 
+	
+	The variance now includes both the variance of the individual variables and the covariance between them:
+	\begin{equation*}
+		\text{Var}\left(\frac{1}{n}\sum_{i=1}^{n}X_i\right) = \frac{1}{n^2} \left(\sum_{i=1}^{n} \text{Var}(X_i) + \sum_{i \neq j} \text{Cov}(X_i, X_j)\right)
+	\end{equation*}
+	Given that \( \text{Var}(X_i) = \sigma^2 \) and \( \text{Cov}(X_i, X_j) = \rho \sigma^2 \), we can simplify further:
+	\begin{align*}
+		\frac{1}{n^2} \left(\sum_{i=1}^{n} \text{Var}(X_i) + \sum_{i \neq j} \text{Cov}(X_i, X_j)\right) &= \frac{1}{n^2}(n\sigma^2 + n(n-1)\rho\sigma^2) \\
+		&= \frac{\sigma^2}{n} + \rho\sigma^2\left(1 - \frac{1}{n}\right)
+	\end{align*}
+	
+	This shows that the variance reduction achieved through averaging is much less significant when the variables are correlated, as the additional term \( \rho\sigma^2\left(1 - \frac{1}{n}\right) \) does not decrease as rapidly with increasing \( n \). Hence, the effectiveness of Random Forests in reducing variance is due to the decorrelation of trees, leading to a more robust and generalizable model.
 	
 \section*{Methods}
 
