@@ -2395,6 +2395,17 @@
     <bcf:citekey order="16" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
     <bcf:citekey order="16" intorder="2">sohilIntroductionStatisticalLearning2022</bcf:citekey>
     <bcf:citekey order="17" intorder="1">moodIntroductionTheoryStatistics1973</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">cortesSupportvectorNetworks1995</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">rosenblattPerceptronProbabilisticModel1958</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">hintonConnectionistLearningProcedures1989</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">hornikMultilayerFeedforwardNetworks1989</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">hornikMultilayerFeedforwardNetworks1989</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">nielsenNeuralNetworksandDeepLearning2015</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

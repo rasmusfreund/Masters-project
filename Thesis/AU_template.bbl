@@ -1743,6 +1743,257 @@
       \endverb
       \keyw{Mathematical statistics}
     \endentry
+    \entry{cortesSupportvectorNetworks1995}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=17acda211a651e90e228f1776ee07818}{%
+           family={Cortes},
+           familyi={C\bibinitperiod},
+           given={Corinna},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c2b3e05872463585b4be6aab10d10d63}{%
+           family={Vapnik},
+           familyi={V\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{fullhash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{fullhashraw}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{bibnamehash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{authorbibnamehash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{authornamehash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{authorfullhash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{authorfullhashraw}{4c67d5268f413e83454c8adc14ab43c3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The support-vector network is a new leaming machine for two-group classification problems. The machine conceptually implements the following idea: input vectors are non-linearly mapped to a very highdimension feature space. In this feature space a linear decision surface is constructed. Special properties of the decision surface ensures high generalization ability of the learning machine. The idea behind the support-vector network was previously implemented for the restricted case where the training data can be separated without errors. We here extend this result to non-separable training data.}
+      \field{issn}{0885-6125, 1573-0565}
+      \field{journaltitle}{Machine Learning}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shortjournal}{Mach Learn}
+      \field{title}{Support-Vector Networks}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{20}
+      \field{year}{1995}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{273\bibrangedash 297}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1007/BF00994018
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\HUNZFEMC\Cortes and Vapnik - 1995 - Support-vector networks.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/BF00994018
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/BF00994018
+      \endverb
+    \endentry
+    \entry{rosenblattPerceptronProbabilisticModel1958}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1750cd87a34d44119e7a4aab9b8012c6}{%
+           family={Rosenblatt},
+           familyi={R\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{fullhash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{fullhashraw}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{bibnamehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authorbibnamehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authornamehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authorfullhash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authorfullhashraw}{1750cd87a34d44119e7a4aab9b8012c6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1939-1471, 0033-295X}
+      \field{journaltitle}{Psychological Review}
+      \field{langid}{english}
+      \field{number}{6}
+      \field{shortjournal}{Psychological Review}
+      \field{shorttitle}{The Perceptron}
+      \field{title}{The Perceptron: {{A}} Probabilistic Model for Information Storage and Organization in the Brain.}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{65}
+      \field{year}{1958}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{386\bibrangedash 408}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1037/h0042519
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\DJMDUK8U\Rosenblatt - 1958 - The perceptron A probabilistic model for informat.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.apa.org/doi/10.1037/h0042519
+      \endverb
+      \verb{url}
+      \verb https://doi.apa.org/doi/10.1037/h0042519
+      \endverb
+    \endentry
+    \entry{hintonConnectionistLearningProcedures1989}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{813bd95fe553e6079cd53a567b238287}
+      \strng{fullhash}{813bd95fe553e6079cd53a567b238287}
+      \strng{fullhashraw}{813bd95fe553e6079cd53a567b238287}
+      \strng{bibnamehash}{813bd95fe553e6079cd53a567b238287}
+      \strng{authorbibnamehash}{813bd95fe553e6079cd53a567b238287}
+      \strng{authornamehash}{813bd95fe553e6079cd53a567b238287}
+      \strng{authorfullhash}{813bd95fe553e6079cd53a567b238287}
+      \strng{authorfullhashraw}{813bd95fe553e6079cd53a567b238287}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A major goal of research on networks of neuron-like processing units is to discover efficient learning procedures that allow these networks to construct complex internal representations of their environment. The learning procedures must be capable of modifying the connection strengths in such a way that internal units which are not part of the input or output come to represent important features of the task domain. Several interesting gradient-descent procedures have recently been discovered. Each connection computes the derivative, with respect to the connection strength, of a global measure of the error in the performance of the network. The strength is then adjusted in the direction that decreases the error. These relatively simple, gradient-descent learning procedures work well for small tasks and the new challenge is to find ways of improving their convergence rate and their generalization abilities so that they can be applied to larger, more realistic tasks.}
+      \field{issn}{00043702}
+      \field{journaltitle}{Artificial Intelligence}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{1-3}
+      \field{shortjournal}{Artificial Intelligence}
+      \field{title}{Connectionist Learning Procedures}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{40}
+      \field{year}{1989}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{185\bibrangedash 234}
+      \range{pages}{50}
+      \verb{doi}
+      \verb 10.1016/0004-3702(89)90049-0
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\SUIRSVM9\Hinton - 1989 - Connectionist learning procedures.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0004370289900490
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0004370289900490
+      \endverb
+    \endentry
+    \entry{hornikMultilayerFeedforwardNetworks1989}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=bec8dd1340457a82c21b54971e4c9417}{%
+           family={Hornik},
+           familyi={H\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+        {{hash=17a26ba07299c37a45cc2475a9f3bc8d}{%
+           family={Stinchcombe},
+           familyi={S\bibinitperiod},
+           given={Maxwell},
+           giveni={M\bibinitperiod}}}%
+        {{hash=426e452a5ec8e692f7740ce0d3e3655c}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Halbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{fullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{fullhashraw}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{bibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authorbibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authornamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authorfullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authorfullhashraw}{31166c18fa8ee825c1eb4693189f9e2a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper rigorously establishes thut standard rnultiluyer feedforward networks with as f\&v us one hidden layer using arbitrary squashing functions ure capable of upproximating uny Bore1 measurable function from one finite dimensional space to another to any desired degree of uccuracy, provided sujficirntly muny hidden units are available. In this sense, multilayer feedforward networks are u class of universul rlpproximators.}
+      \field{issn}{08936080}
+      \field{journaltitle}{Neural Networks}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{5}
+      \field{shortjournal}{Neural Networks}
+      \field{title}{Multilayer Feedforward Networks Are Universal Approximators}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{2}
+      \field{year}{1989}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{359\bibrangedash 366}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/0893-6080(89)90020-8
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\74Y48HL7\Hornik et al. - 1989 - Multilayer feedforward networks are universal appr.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0893608089900208
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0893608089900208
+      \endverb
+    \endentry
+    \entry{nielsenNeuralNetworksandDeepLearning2015}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=afe17482fc813e497188aee3b3783879}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Determination Press}%
+      }
+      \strng{namehash}{afe17482fc813e497188aee3b3783879}
+      \strng{fullhash}{afe17482fc813e497188aee3b3783879}
+      \strng{fullhashraw}{afe17482fc813e497188aee3b3783879}
+      \strng{bibnamehash}{afe17482fc813e497188aee3b3783879}
+      \strng{authorbibnamehash}{afe17482fc813e497188aee3b3783879}
+      \strng{authornamehash}{afe17482fc813e497188aee3b3783879}
+      \strng{authorfullhash}{afe17482fc813e497188aee3b3783879}
+      \strng{authorfullhashraw}{afe17482fc813e497188aee3b3783879}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Neural Networks and Deep Learning}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://neuralnetworksanddeeplearning.com/index.html
+      \endverb
+      \verb{url}
+      \verb http://neuralnetworksanddeeplearning.com/index.html
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -9,6 +9,7 @@
 \usepackage{lastpage} % Used for "n of m" page numbering
 \usepackage{afterpage} % Used to remove background color from pages after title page
 \usepackage{amsmath} % Package for math notation
+\usepackage{amsfonts}
 \usepackage{setspace}% Package for easy line spacing 
 \usepackage{titlesec} % Allows alternative section titles
 \usepackage{lastpage} % Used for "n of m" page numbering
@@ -394,6 +395,321 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	\end{align*}
 	
 	This shows that the variance reduction achieved through averaging is much less significant when the variables are correlated, as the additional term \( \rho\sigma^2\left(1 - \frac{1}{n}\right) \) does not decrease as rapidly with increasing \( n \). Hence, the effectiveness of Random Forests in reducing variance is due to the decorrelation of trees, leading to a more robust and generalizable model.
+	
+	\subsection*{Support Vector Machines (SVMs)}
+	Support Vector Machines (SVMs) are a powerful set of supervised learning methods used for classification, regression, and outlier detection. They are particularly effective in high-dimensional spaces and are versatile in terms of the different kernel functions that can be specified for the decision function.
+	
+	\subsubsection*{Mathematical Formulation}
+	The primary goal of SVM is to find a hyperplane in an \( N \)-dimensional space (\( N \) being the number of features) that distinctly classifies the data points. The best hyperplane for an SVM means the one with the largest margin between the classes.
+	
+	\begin{equation*}
+		\text{maximize} \quad M = \frac{2}{||\mathbf{w}||}
+	\end{equation*}
+	
+	Subject to the constraints:
+	\begin{equation*}
+		y_i (\mathbf{w} \cdot \mathbf{x}_i + b) \geq 1 \quad \text{for all } i
+	\end{equation*}
+	
+	Here, \( \mathbf{w} \) is the weight vector, \( \mathbf{x}_i \) are the feature vectors, \( y_i \) are the class labels, and \( b \) is the bias term. The margin \( M \) is defined as the distance between the hyperplane and the nearest data point from either class \cite{hastieElementsStatisticalLearning2009,cortesSupportvectorNetworks1995}. 
+	
+	\subsubsection*{Soft Margin SVM}
+	In many real-world scenarios, data may not be perfectly linearly separable. To handle such cases, SVMs introduce slack variables \( \xi_i \) to allow some misclassifications:
+	
+	\begin{equation*}
+		\text{minimize} \quad \frac{1}{2} ||\mathbf{w}||^2 + C \sum_{i=1}^{n} \xi_i
+	\end{equation*}
+	
+	Subject to:
+	\begin{equation*}
+		y_i (\mathbf{w} \cdot \mathbf{x}_i + b) \geq 1 - \xi_i \quad \text{and} \quad \xi_i \geq 0 \quad \text{for all } i
+	\end{equation*}
+	
+	Here, \( C \) is a regularization parameter that controls the trade-off between maximizing the margin and minimizing the classification error \cite{hastieElementsStatisticalLearning2009,sohilIntroductionStatisticalLearning2022}.
+	
+	\subsubsection*{Kernel Trick}
+	The power of SVMs lies in their ability to use kernel functions to handle non-linearly separable data by mapping the input features into high-dimensional feature spaces. Commonly used kernels include:
+	
+	\begin{itemize}
+		\item \textbf{Linear kernel}: \( K(\mathbf{x}_i, \mathbf{x}_j) = \mathbf{x}_i \cdot \mathbf{x}_j \)
+		\item \textbf{Polynomial kernel}: \( K(\mathbf{x}_i, \mathbf{x}_j) = (\mathbf{x}_i \cdot \mathbf{x}_j + 1)^d \)
+		\item \textbf{Radial Basis Function (RBF) kernel}: \( K(\mathbf{x}_i, \mathbf{x}_j) = \exp(-\gamma ||\mathbf{x}_i - \mathbf{x}_j||^2) \)
+		\item \textbf{Sigmoid kernel}: \( K(\mathbf{x}_i, \mathbf{x}_j) = \tanh(\alpha \mathbf{x}_i \cdot \mathbf{x}_j + c) \)
+	\end{itemize}
+	
+	The kernel trick allows SVMs to perform linear separation in these higher-dimensional spaces without explicitly computing the coordinates of the data in that space \cite{sohilIntroductionStatisticalLearning2022,hastieElementsStatisticalLearning2009} (see Figure \ref{fig:svm_examples}).
+	
+	\subsubsection*{Properties and Benefits}
+	\begin{itemize}
+		\item \textbf{Effective in high-dimensional spaces}: SVMs are particularly effective when the number of dimensions exceeds the number of samples.
+		\item \textbf{Memory efficiency}: Only a subset of training points (support vectors) are used in the decision function.
+		\item \textbf{Versatility}: Different kernel functions can be specified for the decision function, making SVMs a versatile tool for various types of data.
+	\end{itemize}
+	
+	\begin{figure}[th]
+		\centering
+		\includegraphics[width=0.45\linewidth]{img/svm_linear.png}
+		\includegraphics[width=0.45\linewidth]{img/svm_nonlinear.png}
+		\caption{Support Vector Machines: Linear and Non-linear Decision Boundaries. \\ \textbf{Left}: SVM with a linear kernel creating a linear decision boundary. \textbf{Right}: SVM with a radial basis function (RBF) kernel creating a non-linear decision boundary.}
+		\label{fig:svm_examples}
+	\end{figure}
+	
+	\subsubsection*{Hyperparameter Tuning}
+	Choosing the right hyperparameters, such as the regularization parameter \( C \) and kernel-specific parameters like \( \gamma \) for the RBF kernel, is crucial for the performance of SVMs. Techniques such as cross-validation can be used to tune these parameters.
+	
+	\subsubsection*{Limitations}
+	While SVMs are powerful, they have some limitations:
+	\begin{itemize}
+		\item \textbf{Computational complexity}: SVMs can be computationally intensive, especially with large datasets.
+		\item \textbf{Choice of kernel}: The performance of SVMs depends significantly on the choice of the kernel and its parameters.
+	\end{itemize}
+	
+	In conclusion, Support Vector Machines provide a robust method for classification tasks, especially in high-dimensional spaces. Their ability to handle non-linearly separable data through kernel functions makes them highly versatile and effective in diverse applications.
+	
+	
+	\subsection*{Neural Networks}
+	Neural Networks (NNs) are a class of machine learning models inspired by the human brain's structure and function. They consist of layers of interconnected neurons (nodes), each performing a simple computation. NNs are capable of learning complex patterns in data and have been successfully applied to a wide range of tasks, including image recognition, natural language processing, and more.
+	
+	\subsubsection*{Perceptron Algorithm}
+	The Perceptron algorithm, developed by Frank Rosenblatt in 1957 \cite{rosenblattPerceptronProbabilisticModel1958}, is a fundamental building block of neural networks. It is a type of linear classifier, used for binary classification tasks. The Perceptron updates its weights iteratively to minimize classification errors.
+
+	The Perceptron algorithm works as follows:
+	\begin{enumerate}
+		\item Initialize the weights to small random values.
+		\item For each training example, compute the output:
+		\begin{equation*}
+			\hat{y} = \begin{cases}
+				1 & \text{if } \mathbf{w} \cdot \mathbf{x} + b > 0 \\
+				0 & \text{otherwise}
+			\end{cases}
+		\end{equation*}
+		\item Update the weights if there is a misclassification:
+		\begin{equation*}
+			\mathbf{w} \leftarrow \mathbf{w} + \eta (y - \hat{y}) \mathbf{x}
+		\end{equation*}
+		\item Repeat steps 2 and 3 until convergence or for a fixed number of iterations.
+	\end{enumerate}
+	
+	Here, \( \mathbf{w} \) represents the weight vector, \( \mathbf{x} \) is the input vector, \( b \) is the bias, \( y \) is the true label, \( \hat{y} \) is the predicted label, and \( \eta \) is the learning rate. Figure \ref{fig:perceptron_algorithm} shows a visualization of this process.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{img/perceptron.png}
+		\caption{Perceptron algorithm process. The figure shows the progression of the decision boundary (dashed line) over multiple iterations of the algorithm.}
+		\label{fig:perceptron_algorithm}
+	\end{figure}
+	
+	\subsubsection*{Multi-Layer Perceptron (MLP)}
+	The Multi-Layer Perceptron (MLP) is an extension of the Perceptron, consisting of multiple layers of neurons, including input, hidden, and output layers. Each layer in an MLP performs a linear transformation followed by a non-linear activation function, enabling the network to learn complex, non-linear patterns \cite{hintonConnectionistLearningProcedures1989}. Figure \ref{fig:perceptron_vs_mlp} shows a comparison between the Perceptron and MLP on a non-linearly separable dataset.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{img/perceptron_vs_mlp.png}
+		\caption{Comparison of Perceptron and Multi-Layer Perceptron (MLP) on a non-linearly separable dataset. The top plots show the decision boundary progression for a Perceptron, while the bottom plots show the progression for an MLP.}
+		\label{fig:perceptron_vs_mlp}
+	\end{figure}
+	
+	\subsubsection*{Universal Approximation Theorem}
+	The universal approximation theorem states that a feed-forward neural network with a single hidden layer containing a finite number of neurons can approximate any continuous function on compact subsets of \(\mathbb{R}^n\), given sufficient number of neurons in the hidden layer \cite{hornikMultilayerFeedforwardNetworks1989}. This theorem deserves some attention to understand what it says, so let us break down the key parts:
+	\begin{itemize}
+		\item \textbf{Feed-forward neural network}: Neural network that takes some input data, passes it through its layers, and generates an output. The feed-forward process will be explained in further details below.
+		\item \textbf{Compact subsets of \( \mathbb{R}^n \) }: This means that we are looking at functions defined in a specific, limited region of space (imagine a box in the \(n\)-dimensional space). The term "compact" ensures that this region is finite and closed, meaning it includes its boundary
+	\end{itemize}
+	To reiterate, the theorem tells us that with just one hidden layer and a sufficient number of neurons, a neural network can model highly complex behaviors and patterns in data. This underscores the theoretical power of neural networks to approximate any continuous function effectively:
+	\begin{equation*}
+		f(x) = \sum_{i=1}^{N} \alpha_i \sigma(\mathbf{w}_i \cdot \mathbf{x} + b_i)
+	\end{equation*}
+	where \( \sigma \) is an activation function, \( \mathbf{w}_i \) are the weights, \( \alpha_i \) and \( b_i \) are coefficients and biases \cite{hornikMultilayerFeedforwardNetworks1989}.
+	
+	\subsubsection*{Feed-Forward Process}
+	The feed-forward process involves passing the input data through the layers of the network to generate an output. Each neuron computes a weighted sum of its inputs and applies an activation function:
+	\begin{equation*}
+		a_j = \sigma \left( \sum_{i=1}^{n} w_{ji} x_i + b_j \right)
+	\end{equation*}
+	where \( a_j \) is the activation of the neuron, \( w_{ji} \) are the weights, \( x_i \) are the inputs, \( b_j \) is the bias, and \( \sigma \) is the activation function. Common activation functions include the sigmoid, hyperbolic tangent (tanh), and rectified linear unit (ReLU), but many more exist.\\
+	
+	\textbf{Example:}
+	Consider a simple neural network with one input layer, one hidden layer with two neurons, and one output neuron. Let's assume we are using the sigmoid activation function: \( \sigma(x) = (1 + \exp(-x))^{-1} \). See figure \ref{fig:nn_feedforward} for a visualization of this network.
+	
+	Given:
+	\begin{itemize}
+		\item Input features: \( x_1 \) and \( x_2 \)
+		\item Weights for hidden neurons: \( w_{11}, w_{12}, w_{21}, w_{22} \)
+		\item Bias for hidden neurons: \( b_1 \)
+		\item Weights for output neuron: \( w_{31}, w_{32} \)
+		\item Bias for output neuron: \( b_2 \)
+	\end{itemize}
+	
+	1. Compute the activation for the hidden layer neurons:
+	\begin{equation*}
+		a_1 = \sigma (w_{11} x_1 + w_{12} x_2 + b_1)
+	\end{equation*}
+	\begin{equation*}
+		a_2 = \sigma (w_{21} x_1 + w_{22} x_2 + b_1)
+	\end{equation*}
+	
+	2. Compute the output of the network:
+	\begin{equation*}
+		y = \sigma (w_{31} a_1 + w_{32} a_2 + b_2)
+	\end{equation*}
+	
+	This process shows how the input data is transformed layer by layer to produce the final output.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{img/nn_feedforward.png}
+		\caption{Neural Network Structure with Variables. This figure illustrates a simple neural network with two input neurons (\( x_1 \) and \( x_2 \)), two hidden neurons (\( a_1 \) and \( a_2 \)), and one output neuron (\( y \)). The weights (\( w_{ij} \)) and biases (\( b_i \)) are labeled accordingly.}
+		\label{fig:nn_feedforward}
+	\end{figure}
+	
+	\subsubsection*{Backpropagation Algorithm}
+	The backpropagation algorithm is used to train neural networks by minimizing the loss function. It involves two main steps: the forward pass and the backward pass. 
+	
+	\begin{enumerate}
+		\item Forward Pass:
+		\begin{itemize}
+			\item Calculates activations and the output of the network.
+		\end{itemize}
+		\item Backward Pass:
+		\begin{itemize}
+			\item Calculates the gradients of the cost function with respect to each weight and bias, and updates the weights and biases.
+		\end{itemize}
+	\end{enumerate}
+	
+	The backpropagation process uses gradient descent to minimize the loss function. The weight update rule in gradient descent is given by:
+	\begin{equation*}
+		\Delta w_{ji} = -\eta \frac{\partial L}{\partial w_{ji}}
+	\end{equation*}
+	where \( \eta \) is the learning rate and \( \frac{\partial L}{\partial w_{ji}} \) is the partial derivative of the loss function \( L \) with respect to the weight \( w_{ji} \).
+	
+	To go through backpropagation, we make use of four fundamental equations \cite{nielsenNeuralNetworksandDeepLearning2015}. Before we go through these, we first define the intermediate quantity \( z^l \equiv w^l a^{l-1} + b^l \). This is to be understood as the weighted input of the neurons in layer \( l \), and is used extensively in the equations we're about to explain:
+	
+	1. Output error \(\delta^L\):
+	\[
+	\delta^L = \frac{\partial C}{\partial a^L} \cdot \sigma'(z^L)
+	\]
+    where \( \frac{\partial C}{\partial a^L} \) is the partial derivative of the cost function with respect to the activations in the output layer, and \( \sigma'(z^L) \) is the derivative of the activation function applied to the weighted input \( z^L \).
+	
+	2. Error backpropagation \(\delta^l\) for layer \( l \):
+	\[
+    \delta^l = \left( \sum_{k} \delta^{l+1}_k \cdot w_{k} \right) \cdot \sigma'(z^l)
+	\]
+    where \( \delta^{l+1}_k \) is the error term for neuron \( k \) in the next layer, and \( w_{k} \) is the weight connecting neuron \( k \) in the next layer to the current neuron.
+	
+	3. Gradient of the cost function with respect to biases:
+	\[
+	\frac{\partial C}{\partial b^l} = \delta^l
+	\]
+	
+	4. Gradient of the cost function with respect to weights:
+	\[
+	\frac{\partial C}{\partial w^l} = a^{l-1} (\delta^l)^T
+	\]
+    where \( a^{l-1}_i \) is the activation of the previous layer neuron \( i \), and \( \delta^l_j \) is the error term for neuron \( j \) in the current layer.
+    
+	\textbf{Example:}
+	Let's continue with the example from the feed-forward process. Assume our loss function \( L \) is the mean squared error between the predicted output \( y \) and the true label \( y_{true} \):
+	
+	\begin{equation*}
+		L = \frac{1}{2}(y_{true} - y)^2
+	\end{equation*}
+	
+	1. Compute the error at the output neuron:
+	\begin{equation*}
+		\delta^L = (y - y_{\text{true}}) \cdot \sigma'(z^L)
+	\end{equation*}
+	where \( z^L = w_{31} a_1 + w_{32} a_2 + b_2 \).
+	
+	2. Compute the errors at the hidden neurons:
+	\begin{equation*}
+		\delta_1 = \delta^L \cdot w_{31} \cdot \sigma'(z_1)
+	\end{equation*}
+	\begin{equation*}
+		\delta_2 = \delta^L \cdot w_{32} \cdot \sigma'(z_2)
+	\end{equation*}
+	where \( z_1 = w_{11} x_1 + w_{21} x_2 + b_1 \) and \( z_2 = w_{12} x_1 + w_{22} x_2 + b_1 \).
+	
+	3. Update the weights and biases:
+	\begin{equation*}
+		w_{ji} \leftarrow w_{ji} - \eta \cdot \delta_j \cdot a_i
+	\end{equation*}
+	\begin{equation*}
+		b_j \leftarrow b_j - \eta \cdot \delta_j
+	\end{equation*}
+	
+	E.g., to update the weight \( w_{31} \) and the bias \( b_2 \):
+	\begin{equation*}
+		w_{31} \leftarrow w_{31} - \eta \cdot \delta^L \cdot a_1
+	\end{equation*}
+	\begin{equation*}
+		b_2 \leftarrow b_2 - \eta \cdot \delta^L
+	\end{equation*}
+	
+	By repeating these steps for many iterations, the neural network learns to minimize the loss function and accurately map inputs to outputs.
+	
+	
+	\subsubsection*{Single vs. Multiple Output Neurons}
+	Neural networks can be designed with different output structures depending on the task:
+	\begin{itemize}
+		\item \textbf{Single Output Neuron:} Used for binary classification tasks. Typically employs a sigmoid activation function at the output layer to produce probabilities.
+		\begin{equation*}
+			\sigma(z) = \frac{1}{1 + e^{-z}}
+		\end{equation*}
+		\item \textbf{Multiple Output Neurons:} Used for multi-class classification tasks. Employs the softmax activation function at the output layer to produce a probability distribution over classes.
+		\begin{equation*}
+			\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
+		\end{equation*}
+	\end{itemize}
+	
+	In summary, neural networks are a flexible and powerful model for learning complex patterns in data. Understanding the theoretical underpinnings such as the universal approximation theorem, and practical aspects like feed-forward processing and backpropagation, is essential for leveraging their full potential in various applications. However, traditional neural networks, such as Multi-Layer Perceptrons, face challenges when dealing with high-dimensional data, particularly images and spectral data, due to their lack of inherent spatial structure. Convolutional Neural Networks (CNNs), which we will dive into as the next topic, address these limitations by utilizing convolutional layers that can efficiently capture spatial hierarchies and patterns within the data, making them highly effective for image recognition, signal processing, and analysis of spectral data such as MALDI-TOF MS.
+	
+	\subsection*{Convolutional Neural Networks}
+	It is important to note that while my work focuses on one-dimensional data from MALDI-TOF MS, this section will primarily use images (two-dimensional data) to explain the concepts of Convolutional Neural Networks (CNNs). The reason for this approach is that I believe images provide a more intuitive understanding of the subject due to their visual and spatial properties. The theory behind CNNs is directly applicable to one-dimensional data as well, allowing for a seamless transition of these concepts to MALDI-TOF MS data. Therefore, understanding CNNs in the context of image data will facilitate a clearer comprehension of their application to spectral and signal data.
+	
+	\subsubsection*{Feature Extraction with Convolutions}
+	Convolutions are the fundamental building blocks of CNNs, allowing the network to extract meaningful features from the input data. By applying a set of filters (kernels) across the input, convolutions help identify patterns such as edges, textures, and more complex features in later layers. 
+	
+	\textbf{Example:}
+	Consider a simple 3x3 filter applied to an image. The filter slides over the image, performing element-wise multiplication and summing the results to produce a feature map. This process helps detect specific features, such as vertical or horizontal edges.
+	
+	\subsubsection*{Sparse Interactions}
+	In a CNN, each neuron in a layer is connected to a small region of the input (receptive field) rather than the entire input. This sparse connectivity ensures that the network focuses on local patterns, making the model more efficient and reducing the number of parameters compared to fully connected layers.
+	
+	\subsubsection*{Parameter Sharing}
+	Parameter sharing means that the same set of weights (filter) is used across different positions in the input. This significantly reduces the number of parameters in the network and allows the model to detect the same feature across different spatial locations.
+	
+	\subsubsection*{Equivariant Representations}
+	Convolutions are equivariant to translations, meaning that shifting the input results in a corresponding shift in the output feature map. This property ensures that spatial relationships are preserved, making CNNs effective in tasks requiring spatial awareness.
+	
+	\subsubsection*{Formal Definition of a Convolution}
+	Mathematically, a convolution operation is defined as:
+	\begin{equation*}
+		(f * g)(t) = \int_{-\infty}^{\infty} f(\tau) g(t - \tau) d\tau
+	\end{equation*}
+	In the context of CNNs, this is typically a discrete sum:
+	\begin{equation*}
+		(f * g)[i, j] = \sum_m \sum_n f[m, n] g[i - m, j - n]
+	\end{equation*}
+	where \( f \) is the input image and \( g \) is the filter.
+	
+	\subsubsection*{Kernels and Padding}
+	Kernels (or filters) are small matrices used to detect features in the input data. Padding involves adding extra pixels around the border of the input to control the spatial dimensions of the output. It is essential to maintain the size of the feature maps throughout the network.
+	
+	\subsubsection*{Receptive Field}
+	The receptive field refers to the region of the input that a particular neuron is responsive to. As the network goes deeper, the receptive field increases, allowing the network to capture more complex and abstract features.
+	
+	\subsubsection*{LeNet-5}
+	LeNet-5, developed by Yann LeCun and colleagues, is one of the earliest CNN architectures. It consists of two convolutional layers followed by subsampling (pooling) layers, and three fully connected layers. LeNet-5 was designed for handwritten digit recognition and demonstrated the power of CNNs in image processing tasks.
+	
+	\subsubsection*{AlexNet}
+	AlexNet, introduced by Alex Krizhevsky and colleagues in 2012, significantly advanced the field of deep learning. It has a deeper architecture than LeNet-5, with five convolutional layers, followed by three fully connected layers. AlexNet's success in the ImageNet competition highlighted the potential of deep CNNs for large-scale image classification.
+	
+	\subsubsection*{Fully Connected Layers in CNNs}
+	After several convolutional and pooling layers, CNNs typically include fully connected layers. These layers integrate the features learned by the convolutional layers to make the final prediction. They act as the classifier in the network.
+	
+	\subsubsection*{Translation Invariance}
+	Translation invariance is the ability of a CNN to recognize objects regardless of their position in the input image. Pooling layers, such as max pooling, contribute to this property by down-sampling the feature maps, reducing their spatial dimensions while retaining the most important features.
+	
 	
 \section*{Methods}
 
