@@ -1994,6 +1994,186 @@
       \verb http://neuralnetworksanddeeplearning.com/index.html
       \endverb
     \endentry
+    \entry{osheaIntroductionConvolutionalNeural2015}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=f92af5765968c6de4c1e42d397224c9c}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Keiron},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b5da23fc726b6d32ee9a3247fa6663fc}{%
+           family={Nash},
+           familyi={N\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{fullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{fullhashraw}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{bibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorbibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authornamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorfullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorfullhashraw}{1e0b31097f3d41e61dd78e46b147642a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The field of machine learning has taken a dramatic twist in recent times, with the rise of the Artificial Neural Network (ANN). These biologically inspired computational models are able to far exceed the performance of previous forms of artificial intelligence in common machine learning tasks. One of the most impressive forms of ANN architecture is that of the Convolutional Neural Network (CNN). CNNs are primarily used to solve difficult image-driven pattern recognition tasks and with their precise yet simple architecture, offers a simplified method of getting started with ANNs.}
+      \field{day}{2}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{pubstate}{preprint}
+      \field{title}{An {{Introduction}} to {{Convolutional Neural Networks}}}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 1511.08458
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\D4GG59Q2\O'Shea and Nash - 2015 - An Introduction to Convolutional Neural Networks.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1511.08458
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1511.08458
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing}
+    \endentry
+    \entry{nirthikaPoolingConvolutionalNeural2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=2db3db874ac7ea09a747beac504e0d4d}{%
+           family={Nirthika},
+           familyi={N\bibinitperiod},
+           given={Rajendran},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6b8fccd0934f77b74023c2d5f6a04cfe}{%
+           family={Manivannan},
+           familyi={M\bibinitperiod},
+           given={Siyamalan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=47746931ce669ca266848350797acdec}{%
+           family={Ramanan},
+           familyi={R\bibinitperiod},
+           given={Amirthalingam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=36614ccb9d8cb625cfe591cc9c109fc2}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ruixuan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1e37516f7f032122c51d00ab1ff6bca}
+      \strng{fullhash}{17b648c25e0ebd3b0e163e2e4ceae320}
+      \strng{fullhashraw}{17b648c25e0ebd3b0e163e2e4ceae320}
+      \strng{bibnamehash}{d1e37516f7f032122c51d00ab1ff6bca}
+      \strng{authorbibnamehash}{d1e37516f7f032122c51d00ab1ff6bca}
+      \strng{authornamehash}{d1e37516f7f032122c51d00ab1ff6bca}
+      \strng{authorfullhash}{17b648c25e0ebd3b0e163e2e4ceae320}
+      \strng{authorfullhashraw}{17b648c25e0ebd3b0e163e2e4ceae320}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Convolutional neural networks (CNN) are widely used in computer vision and medical image analysis as the state-of-theart technique. In CNN, pooling layers are included mainly for downsampling the feature maps by aggregating features from local regions. Pooling can help CNN to learn invariant features and reduce computational complexity. Although the max and the average pooling are the widely used ones, various other pooling techniques are also proposed for different purposes, which include techniques to reduce overfitting, to capture higher-order information such as correlation between features, to capture spatial or structural information, etc. As not all of these pooling techniques are well-explored for medical image analysis, this paper provides a comprehensive review of various pooling techniques proposed in the literature of computer vision and medical image analysis. In addition, an extensive set of experiments are conducted to compare a selected set of pooling techniques on two different medical image classification problems, namely HEp-2 cells and diabetic retinopathy image classification. Experiments suggest that the most appropriate pooling mechanism for a particular classification task is related to the scale of the class-specific features with respect to the image size. As this is the first work focusing on pooling techniques for the application of medical image analysis, we believe that this review and the comparative study will provide a guideline to the choice of pooling mechanisms for various medical image analysis tasks. In addition, by carefully choosing the pooling operations with the standard ResNet architecture, we show new state-of-theart results on both HEp-2 cells and diabetic retinopathy image datasets.}
+      \field{issn}{0941-0643, 1433-3058}
+      \field{journaltitle}{Neural Computing and Applications}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{7}
+      \field{shortjournal}{Neural Comput \& Applic}
+      \field{shorttitle}{Pooling in Convolutional Neural Networks for Medical Image Analysis}
+      \field{title}{Pooling in Convolutional Neural Networks for Medical Image Analysis: A Survey and an Empirical Study}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{34}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{5321\bibrangedash 5347}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1007/s00521-022-06953-8
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\BF4Z78JZ\Nirthika et al. - 2022 - Pooling in convolutional neural networks for medic.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/s00521-022-06953-8
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/s00521-022-06953-8
+      \endverb
+    \endentry
+    \entry{krizhevskyImageNetClassificationDeep2017}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{fullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{fullhashraw}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{bibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorbibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authornamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorfullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorfullhashraw}{1a23c09aa65b3c2ade45ed18d8127375}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5\% and 17.0\% which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation. To reduce overfitting in the fully-connected layers we employed a recently-developed regularization method called “dropout” that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3\%, compared to 26.2\% achieved by the second-best entry.}
+      \field{day}{24}
+      \field{issn}{0001-0782, 1557-7317}
+      \field{journaltitle}{Communications of the ACM}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{6}
+      \field{shortjournal}{Commun. ACM}
+      \field{title}{{{ImageNet}} Classification with Deep Convolutional Neural Networks}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{60}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{84\bibrangedash 90}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1145/3065386
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\PR6SFGBZ\Krizhevsky et al. - 2017 - ImageNet classification with deep convolutional ne.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3065386
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3065386
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -667,49 +667,80 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	It is important to note that while my work focuses on one-dimensional data from MALDI-TOF MS, this section will primarily use images (two-dimensional data) to explain the concepts of Convolutional Neural Networks (CNNs). The reason for this approach is that I believe images provide a more intuitive understanding of the subject due to their visual and spatial properties. The theory behind CNNs is directly applicable to one-dimensional data as well, allowing for a seamless transition of these concepts to MALDI-TOF MS data. Therefore, understanding CNNs in the context of image data will facilitate a clearer comprehension of their application to spectral and signal data.
 	
 	\subsubsection*{Feature Extraction with Convolutions}
-	Convolutions are the fundamental building blocks of CNNs, allowing the network to extract meaningful features from the input data. By applying a set of filters (kernels) across the input, convolutions help identify patterns such as edges, textures, and more complex features in later layers. 
+	Convolutions are the fundamental building blocks of CNNs, allowing the network to extract meaningful features from the input data. By applying a set of filters (kernels) across the input, convolutions help identify patterns such as edges, textures, and more complex features in later layers \cite{osheaIntroductionConvolutionalNeural2015}.
 	
-	\textbf{Example:}
-	Consider a simple 3x3 filter applied to an image. The filter slides over the image, performing element-wise multiplication and summing the results to produce a feature map. This process helps detect specific features, such as vertical or horizontal edges.
+	\textbf{Example:} Consider a simple 3x3 filter applied to an image. The filter slides over the image, performing element-wise multiplication and summing the results to produce a feature map. This process helps detect specific features, such as vertical or horizontal edges. This effect is shown in Figure \ref{fig:nn_featureextraction} where the input image (left) is convolved with two different kernels that detect vertical edges (middle) and horizontal edges (right).
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\linewidth]{img/kernels.png}
+		\caption{Illustration of feature extraction using convolutions. The input image (left) is convolved with a vertical edge detection kernel (middle) and a horizontal edge detection kernel (right). The resulting feature maps highlight vertical and horizontal edges, respectively.}
+		\label{fig:nn_featureextraction}
+	\end{figure}
 	
 	\subsubsection*{Sparse Interactions}
-	In a CNN, each neuron in a layer is connected to a small region of the input (receptive field) rather than the entire input. This sparse connectivity ensures that the network focuses on local patterns, making the model more efficient and reducing the number of parameters compared to fully connected layers.
+	In a CNN, each neuron in a layer is connected to a small region of the input known as the receptive field, rather than the entire input. This sparse connectivity ensures that the network focuses on local patterns, making the model more efficient and reducing the number of parameters compared to fully connected layers.
 	
-	\subsubsection*{Parameter Sharing}
-	Parameter sharing means that the same set of weights (filter) is used across different positions in the input. This significantly reduces the number of parameters in the network and allows the model to detect the same feature across different spatial locations.
+	Sparse interactions mean that a single convolutional filter (kernel) is applied locally, which allows the network to learn spatial hierarchies. For instance, in an image, lower layers might learn to detect simple features such as edges or textures, while higher layers might combine these features to detect more complex patterns like shapes or objects. By limiting the connections to a local region, CNNs can efficiently capture spatial dependencies.
 	
-	\subsubsection*{Equivariant Representations}
-	Convolutions are equivariant to translations, meaning that shifting the input results in a corresponding shift in the output feature map. This property ensures that spatial relationships are preserved, making CNNs effective in tasks requiring spatial awareness.
+	\paragraph{Benefits of Sparse Interactions}
+	\begin{itemize}
+		\item \textbf{Efficiency}: Sparse interactions significantly reduce the number of parameters in the model. For a typical fully connected layer with \(n\) input units and \(m\) output units, there are \(n \times m\) parameters. In contrast, a convolutional layer with a filter size of \(k \times k\) applied to an \(n \times n\) input has \(k^2\) parameters per filter. Since CNNs typically use multiple filters, the number of parameters is \( k^2 \times f \), where \( f \) is the number of filters. This is still much smaller and depends only on the filter size and the number of filters, not the input size.
+		\item \textbf{Parameter Sharing}: The same filter (set of parameters) is applied across different regions of the input, which allows the network to detect the same feature in different parts of the input. This parameter sharing leads to better generalization and reduces the risk of overfitting.
+		\item \textbf{Local Receptive Fields}: Each neuron only focuses on a small region of the input, which enables the network to learn local features effectively. This local focus is crucial for tasks like image recognition, where spatial hierarchies are essential.
+	\end{itemize}
 	
-	\subsubsection*{Formal Definition of a Convolution}
-	Mathematically, a convolution operation is defined as:
-	\begin{equation*}
-		(f * g)(t) = \int_{-\infty}^{\infty} f(\tau) g(t - \tau) d\tau
-	\end{equation*}
-	In the context of CNNs, this is typically a discrete sum:
-	\begin{equation*}
-		(f * g)[i, j] = \sum_m \sum_n f[m, n] g[i - m, j - n]
-	\end{equation*}
-	where \( f \) is the input image and \( g \) is the filter.
+	\textbf{Example:} Consider an input image of size 32x32 pixels. A convolutional layer with a 5x5 filter scans across the image, creating a feature map. Each neuron in this feature map is connected to a 5x5 region of the input image, resulting in a sparse interaction. If the filter moves one pixel at a time (stride of 1), the feature map will have a size of 28x28 (since the filter cannot go beyond the boundaries of the image without padding). This localized interaction helps the network learn relevant features while keeping the number of parameters low.\\
 	
-	\subsubsection*{Kernels and Padding}
-	Kernels (or filters) are small matrices used to detect features in the input data. Padding involves adding extra pixels around the border of the input to control the spatial dimensions of the output. It is essential to maintain the size of the feature maps throughout the network.
+	By leveraging sparse interactions, CNNs are able to efficiently process high-dimensional data such as images, learning hierarchical features that are essential for complex pattern recognition tasks.
 	
 	\subsubsection*{Receptive Field}
-	The receptive field refers to the region of the input that a particular neuron is responsive to. As the network goes deeper, the receptive field increases, allowing the network to capture more complex and abstract features.
+	The receptive field refers to the region of the input that a particular neuron is responsive to. In a convolutional neural network (CNN), neurons in a layer are connected only to a small, localized region of the input, known as the receptive field. As the network goes deeper, the receptive field increases, allowing the network to capture more complex and abstract features \cite{osheaIntroductionConvolutionalNeural2015}.
 	
-	\subsubsection*{LeNet-5}
-	LeNet-5, developed by Yann LeCun and colleagues, is one of the earliest CNN architectures. It consists of two convolutional layers followed by subsampling (pooling) layers, and three fully connected layers. LeNet-5 was designed for handwritten digit recognition and demonstrated the power of CNNs in image processing tasks.
+	For example, in the first convolutional layer, each neuron might be connected to a 3x3 region of the input image (as shown in Figure \ref{fig:nn_receptivefield}). As we add more convolutional layers, the receptive field of neurons in higher layers becomes larger. This means that each neuron in these deeper layers is influenced by a larger portion of the original input image. Consequently, the network can learn hierarchical features, starting with simple edges and textures in the early layers and moving to more complex patterns and objects in the deeper layers.
 	
-	\subsubsection*{AlexNet}
-	AlexNet, introduced by Alex Krizhevsky and colleagues in 2012, significantly advanced the field of deep learning. It has a deeper architecture than LeNet-5, with five convolutional layers, followed by three fully connected layers. AlexNet's success in the ImageNet competition highlighted the potential of deep CNNs for large-scale image classification.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\linewidth]{img/receptive_field.png}
+		\caption{Illustration of the receptive field in a convolutional neural network. The input image is convolved with a 3x3 kernel (blue region) to produce a single value in the feature map (red region). This process demonstrates how each value in the feature map is influenced by a specific region of the input image, which is the receptive field of the neuron.}
+		\label{fig:nn_receptivefield}
+	\end{figure}
+	
+	\subsubsection*{Pooling Layers}
+	Pooling layers are a critical component of convolutional neural networks (CNNs). They perform downsampling operations that reduce the spatial dimensions (width and height) of the input feature maps while retaining important features \cite{nirthikaPoolingConvolutionalNeural2022}. Pooling serves several key purposes in CNNs:
+	\begin{itemize}
+		\item \textbf{Dimensionality Reduction:} By reducing the spatial dimensions of the feature maps, pooling layers decrease the number of parameters and computational complexity of the model. This makes the network more efficient and faster to train.
+		\item \textbf{Translation Invariance:} Pooling helps the network to become more robust to translations and distortions in the input data. By summarizing local regions, it ensures that small shifts or changes in the input do not significantly affect the output.
+		\item \textbf{Overfitting Reduction:} By reducing the number of parameters, pooling layers help to prevent overfitting, especially when working with smaller datasets.
+	\end{itemize}
+	
+	\paragraph{Common Pooling Methods}
+	Several pooling methods are commonly used in CNNs:
+	\begin{itemize}
+		\item \textbf{Max Pooling:} Max pooling selects the maximum value within a local patch of the feature map. It effectively retains the most prominent features in the local region.
+		\begin{equation*}
+			y_{i,j} = \max \left( x_{i+k,j+l} \right), \quad \forall \, 0 \leq k,l < f
+		\end{equation*}
+		where \( f \) is the filter size, and \( x \) is the input feature map.
+		
+		\item \textbf{Average Pooling:} Average pooling computes the average value within a local patch of the feature map. It smooths the feature map and reduces noise by averaging the values.
+		\begin{equation*}
+			y_{i,j} = \frac{1}{f^2} \sum_{k=0}^{f-1} \sum_{l=0}^{f-1} x_{i+k,j+l}
+		\end{equation*}
+	\end{itemize}
+	
+	\paragraph{Example:}
+	Consider a 4x4 feature map that we apply 2x2 max pooling to with a stride of 2. The resulting 2x2 feature map will contain the maximum values from each 2x2 patch of the input feature map. This process reduces the spatial dimensions by a factor of 2 while preserving the most significant features.
+	
+	In summary, pooling layers play a crucial role in reducing the spatial dimensions of feature maps, enhancing computational efficiency, and promoting translation invariance in convolutional neural networks. The most commonly used pooling methods are max pooling and average pooling, each with its own advantages depending on the application.
 	
 	\subsubsection*{Fully Connected Layers in CNNs}
-	After several convolutional and pooling layers, CNNs typically include fully connected layers. These layers integrate the features learned by the convolutional layers to make the final prediction. They act as the classifier in the network.
+	After several convolutional and pooling layers, CNNs typically include fully connected layers. These layers integrate the features learned by the convolutional layers to make the final prediction, and perform duties similar to layers in standard NNs \cite{osheaIntroductionConvolutionalNeural2015}.
 	
-	\subsubsection*{Translation Invariance}
-	Translation invariance is the ability of a CNN to recognize objects regardless of their position in the input image. Pooling layers, such as max pooling, contribute to this property by down-sampling the feature maps, reducing their spatial dimensions while retaining the most important features.
+	\subsubsection*{AlexNet}
+	AlexNet, introduced by Alex Krizhevsky and colleagues in 2012 \cite{krizhevskyImageNetClassificationDeep2017}, significantly advanced the field of deep learning. It has a deeper architecture than LeNet-5, with five convolutional layers, followed by three fully connected layers. AlexNet's success in the ImageNet competition highlighted the potential of deep CNNs for large-scale image classification.
 	
+		
 	
 \section*{Methods}
 

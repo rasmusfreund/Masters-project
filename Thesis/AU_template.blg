@@ -1,15 +1,15 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
-[0] Config.pm:311> INFO - Logfile is 'AU_template.blg'
-[251] biber-MSWIN64:340> INFO - === 
-[352] Biber.pm:420> INFO - Reading 'AU_template.bcf'
-[497] Biber.pm:994> INFO - Found 20 citekeys in bib section 0
-[516] Biber.pm:4463> INFO - Processing section 0
-[550] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[642] bibtex.pm:1713> INFO - LaTeX decoding ...
-[721] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[1248] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1248] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1248] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1248] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[1307] bbl.pm:676> INFO - Writing 'AU_template.bbl' with encoding 'UTF-8'
-[1462] bbl.pm:779> INFO - Output to AU_template.bbl
+[1] Config.pm:311> INFO - Logfile is 'AU_template.blg'
+[155] biber-MSWIN64:340> INFO - === 
+[196] Biber.pm:420> INFO - Reading 'AU_template.bcf'
+[323] Biber.pm:994> INFO - Found 23 citekeys in bib section 0
+[338] Biber.pm:4463> INFO - Processing section 0
+[350] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[426] bibtex.pm:1713> INFO - LaTeX decoding ...
+[503] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[913] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[913] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[913] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[913] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[946] bbl.pm:676> INFO - Writing 'AU_template.bbl' with encoding 'UTF-8'
+[1092] bbl.pm:779> INFO - Output to AU_template.bbl
