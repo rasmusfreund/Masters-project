@@ -2411,6 +2411,15 @@
     <bcf:citekey order="28" intorder="1">nirthikaPoolingConvolutionalNeural2022</bcf:citekey>
     <bcf:citekey order="29" intorder="1">osheaIntroductionConvolutionalNeural2015</bcf:citekey>
     <bcf:citekey order="30" intorder="1">krizhevskyImageNetClassificationDeep2017</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">python</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">weis2021driams</bcf:citekey>
+    <bcf:citekey order="32" intorder="2">weisDirectAntimicrobialResistance2022</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">scikit-learn</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">2017arXiv170201460S</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">scikit-learn</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">NEURIPS2019_9015</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">falcon2019pytorch</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">wandb</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

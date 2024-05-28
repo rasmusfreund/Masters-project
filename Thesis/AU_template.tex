@@ -21,6 +21,7 @@
 \usepackage{graphicx} % Handling graphics
 \usepackage{fancyhdr} % Increased control over headers and footers
 \usepackage{caption}
+\usepackage{rotating}
 
 % ------Package suggestions------
 \usepackage[backend=biber, style=numeric-comp, sorting=none]{biblatex} % Management of bibliography
@@ -739,10 +740,62 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 	
 	\subsubsection*{AlexNet}
 	AlexNet, introduced by Alex Krizhevsky and colleagues in 2012 \cite{krizhevskyImageNetClassificationDeep2017}, significantly advanced the field of deep learning. It has a deeper architecture than LeNet-5, with five convolutional layers, followed by three fully connected layers. AlexNet's success in the ImageNet competition highlighted the potential of deep CNNs for large-scale image classification.
-	
 		
-	
 \section*{Methods}
+	Different methodologies were employed for predicting species and resistances, and these will be described in their respective sections. However, common practices were followed for both methodologies. Specifically, Python (version 3.11) \cite{python} was used as the programming language. All computations were performed on the GenomeDK cluster (\url{genome.au.dk}) at Aarhus University.
+	
+	\subsection*{Species classification}
+	For species classification, the data used in this thesis was sourced directly from the dataset described in Weis et al. (2022) \cite{weis2021driams,weisDirectAntimicrobialResistance2022}. Specifically, the mass spectra were binned into 6000 fixed bins of 3 Da each, ranging from 2,000 Da to 20,000 Da, to create a consistent 6000-dimensional feature vector for each sample . This binning process ensures that each spectrum is uniformly represented, enabling the effective application of machine learning algorithms.
+	
+	The preprocessing steps involved in creating the binned data include the following:
+	
+	\begin{itemize}
+		\item \textbf{Mass-to-Charge Ratio Partitioning}: The m/z axis is divided into equal-sized bins of 3 Da.
+		\item \textbf{Intensity Summation}: The intensity of all measurements falling within each bin is summed to produce the feature vector.
+	\end{itemize}
+	
+	Prior to creating any models, the data was filtered to exclude data points that included the string "MIX!" in their species label, as it was unclear how this label should be interpreted. Additionally, species containing fewer than five samples were excluded to ensure more reliable modeling. The data was then split into training (80\%) and validation (20\%) sets using a stratified split method based on species to ensure that all species were represented in both sets.
+	
+	All machine learning models for species classification, including Elastic Net, Ridge, Random Forest, and SVM, were implemented using scikit-learn \cite{scikit-learn}.
+	
+	\subsection*{Resistance classification}
+	For resistance classification, the mass spectra underwent several preprocessing steps to ensure the data was suitable for model training and prediction. These preprocessing steps included log-transformation, smoothing, normalization, and rescaling, as detailed below. These steps were originally implemented in R by PhD student Johan Kjeldbjerg Lassen.
+	
+	\subsubsection*{Preprocessing steps}
+	\begin{enumerate}
+		\item \textbf{Log-transformation}: The intensity values of the spectra were log-transformed to stabilize variance and make the data more normally distributed:
+		\begin{equation*}
+			int_{log} = log(int + 1)
+		\end{equation*}
+		\item \textbf{Smoothing with LOWESS}: A two-step Locally Weighted Scatterplot Smoothing (LOWESS) procedure was applied to the log-transformed intensities:
+		\begin{itemize}
+			\item \textbf{First LOWESS}: Applied with a fraction (frac) of \( 0.0008 \) and a regularization parameter (\( \lambda \)) of 40 to smooth out the data.
+			\item \textbf{Second LOWESS}: Applied with a fraction (frac) of \( 0.3 \) and a regularization parameter (\( \lambda \)) of 40 to further smooth and normalize the data.
+		\end{itemize}
+		\item \textbf{Rescaling}: The normalized intensities were rescaled to a range of \( [-1, 1] \):
+		\begin{equation}
+			int_{rescaled} = 2 \left( \frac{int_{normalized} - int_{min}}{int_{max} - int_{min}} \right) - 1
+		\end{equation}
+		\item \textbf{Mapping to new scale}: The mass-to-charge ratio (m/z) values were mapped to a new scale ranging from 2000 to 20000 with 0.5 Da increments using a final LOWESS smoothing with a fraction (frac) of \( 0.0003 \) and a regularization parameter (\( \lambda \)) of 40.
+	\end{enumerate}
+	These preprocessing steps ensured that the spectra were uniformly represented and smoothed, reducing noise and enhancing signal clarity. A visualization of these steps is shown in Figure \ref{fig:preprocessing_steps}.
+	
+	\subsubsection*{Data filtering and splitting}
+	In order to standardize and focus the analysis on the most prevalent resistances, I identified the top 25 most frequent resistances from each dataset in the DRIAMS-A collection using a custom Python script. The script filters out entries labeled as 'MIX!' in the species column, counts the occurrences of each resistance phenotype, and selects the most common resistances. Subsequently, the script consolidates these resistances across all datasets, retaining only those resistances in the filtered datasets, thus ensuring that the final datasets include a consistent set of the most frequent resistance phenotypes for analysis.
+	
+	The filtered datasets were initially divided into training/validation (90\%) and testing (10\%) sets. Due to the multilabel nature of the resistance classification problem, the split was performed using scikit-multilearn \cite{2017arXiv170201460S}, which ensures an even distribution of label combinations across the splits (as demonstrated in \ref{fig:multilabel_split}). The training/validation set was further divided into training (80\%) and validation (20\%) subsets using the same method.
+	
+	\subsubsection*{Model implementations}
+	Ridge and Random Forest classification models were implemented using sci-kit learn \cite{scikit-learn}. Convolutional Neural Network models were implemented using PyTorch \cite{NEURIPS2019_9015}, PyTorch Lightning \cite{falcon2019pytorch}, and Weights and Biases \cite{wandb}.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\linewidth]{img/preprocessing_steps_combined.png}
+		\caption{Illustration of the preprocessing steps applied to an original MALDI-TOF MS spectrum. The top plot shows the original spectrum. The middle row includes three subplots displaying the intermediate steps: the log-transformed spectrum (left), the first LOWESS smoothing (middle), and the second LOWESS smoothing with normalization (right). The bottom plot presents the final rescaled and smoothed spectrum. This step-by-step preprocessing enhances the data quality by reducing noise and normalizing intensity values, facilitating more effective downstream analysis.}
+		\label{fig:preprocessing_steps}
+	\end{figure}
+	\clearpage
+
 
 \section*{Results}
 
@@ -750,5 +803,20 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 
 \newpage
 \printbibliography
+
+\clearpage
+\renewcommand{\thefigure}{Supplementary \arabic{figure}}
+\renewcommand{\figurename}{}
+\setcounter{figure}{0}
+
+\section*{Supplementary Materials}
+
+\begin{sidewaysfigure}[h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{img/2018_train_val_test_split.png}
+	\caption{Distribution of Label Combinations between Train/Validation and Test Sets. The bar plot shows the frequency of some of the label combinations in the training/validation set (blue) and the test set (green). The x-axis represents the different label combinations, while the y-axis indicates the count of each combination in the respective datasets. This visualization demonstrates that the stratified split maintains the distribution of label combinations across the train/validation and test sets, ensuring that the datasets are representative of each other.}
+	\label{fig:multilabel_split}
+\end{sidewaysfigure}
+
 
 \end{document}
