@@ -1,0 +1,2 @@
+Best Parameters: {'svm__C': 0.1, 'svm__gamma': 'scale', 'svm__kernel': 'linear'}
+Best Score: 0.9773511949193784

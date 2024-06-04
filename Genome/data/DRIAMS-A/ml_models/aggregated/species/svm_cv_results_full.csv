@@ -1,0 +1,2 @@
+params,mean_test_score,std_test_score
+"{'svm__C': 0.1, 'svm__gamma': 'scale', 'svm__kernel': 'linear'}",0.9773511949193784,0.0010162278154213923

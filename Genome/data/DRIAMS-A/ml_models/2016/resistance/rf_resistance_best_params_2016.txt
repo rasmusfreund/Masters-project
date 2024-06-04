@@ -1,0 +1,2 @@
+Best Parameters: {'max_depth': 2, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200}
+Best Score: 0.7476612297466192

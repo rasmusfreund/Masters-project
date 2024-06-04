@@ -1,0 +1,7 @@
+Daptomycin
+Linezolid
+Tigecycline
+Metronidazole
+ESBL
+MRSA
+Minocycline

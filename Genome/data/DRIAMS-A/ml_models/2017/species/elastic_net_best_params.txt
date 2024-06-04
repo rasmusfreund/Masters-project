@@ -1,0 +1,2 @@
+Best Parameters: {'elastic_net__alpha': 0.1, 'elastic_net__l1_ratio': 0.1}
+Best Score: 0.12674651916433174

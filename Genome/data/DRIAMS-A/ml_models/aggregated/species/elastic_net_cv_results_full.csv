@@ -1,0 +1,2 @@
+params,mean_test_score,std_test_score
+"{'elastic_net__alpha': 0.1, 'elastic_net__l1_ratio': 0.1}",0.09835786929109165,0.00033435982451584617

@@ -1,0 +1,21 @@
+Amoxicillin
+Chloramphenicol
+Cefpodoxime
+Cefotaxime
+Cefuroxime
+Cefuroxime.1
+Fusidic acid
+Cefoxitin
+Nitrofurantoin
+Linezolid
+Mupirocin
+Moxifloxacin
+Norfloxacin
+Ofloxacin
+Oxacillin
+Pristinamycin
+Quinupristin-Dalfopristin
+Sparfloxacin
+Teicoplanin
+Telithromycin
+Tigecycline

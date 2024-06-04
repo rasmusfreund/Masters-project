@@ -1,0 +1,2 @@
+Best Parameters: {'ridge__alpha': 100}
+Best Score: 0.1852504680925485

@@ -1,0 +1,7 @@
+params,mean_test_score,std_test_score
+"{'svm__C': 0.1, 'svm__gamma': 'scale', 'svm__kernel': 'linear'}",0.9751699501321032,0.0010266594516155322
+"{'svm__C': 0.1, 'svm__gamma': 'auto', 'svm__kernel': 'linear'}",0.9751699501321032,0.0010266594516155322
+"{'svm__C': 1, 'svm__gamma': 'scale', 'svm__kernel': 'linear'}",0.9751699501321032,0.0010266594516155322
+"{'svm__C': 1, 'svm__gamma': 'auto', 'svm__kernel': 'linear'}",0.9751699501321032,0.0010266594516155322
+"{'svm__C': 10, 'svm__gamma': 'scale', 'svm__kernel': 'linear'}",0.9751699501321032,0.0010266594516155322
+"{'svm__C': 10, 'svm__gamma': 'auto', 'svm__kernel': 'linear'}",0.9751699501321032,0.0010266594516155322

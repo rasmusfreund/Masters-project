@@ -1,0 +1,2 @@
+params,mean_test_score,std_test_score
+{'ridge__alpha': 1000},0.32494801207445434,0.003833407551262629
