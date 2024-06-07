@@ -817,8 +817,6 @@ To address the challenges posed by AMR, this thesis adopts a multi-stage approac
 			\hline
 			Output \\
 			\hline
-			Sigmoid function \\
-			\hline
 			FC \\
 			\hline
 			Dropout \\
@@ -914,19 +912,19 @@ Overall, the SVM model outperforms the others, followed by Random Forest. Ridge 
 	\label{fig:model_comparison_species}
 \end{figure}
 
-\subsection*{Antimicrobial Resistance Classification}
-For the year 2017, the antibiotic resistance distribution was visualized (Figure \ref{fig:antibiotic_resistance_distribution}), illustrating the frequency of resistance for the top 25 antibiotics across different species. The stacked bar plot represents the log-transformed frequency of resistance for each antibiotic. Each bar is divided by species, showing the contribution of each species to the overall resistance for that antibiotic.
-
-The data reveal that resistance is predominantly observed in a few species, with notable contributions from \textit{Pseudomonas aeruginosa} (light green) \textit{Staphylococcus aureus} (dark green), \textit{Streptococcus agalactiae} (pink), \textit{Klebsiella pneumoniae} (light brown), \textit{Eschericia coli} (light blue), and \textit{Staphylococcus epidermidis} (dark blue). These species frequently appear across multiple antibiotics.
-
-The antibiotics with the highest frequency of resistance are Ampicillin-Amoxicillin, Penicillin, and Amoxicillin-Clavulanic Acid. The resistance is primarily driven by \textit{Staphylococcus epidermidis}, \textit{Eschericia coli}, and \textit{Staphylococcus aureus}. There is a noticeable variation in the species composition of resistance for different antibiotics.
+\subsection*{Antimicrobial Resistance}
+For the year 2017, the antibiotic resistance distribution was visualized (Figure \ref{fig:antibiotic_resistance_distribution}), illustrating the frequency of resistance for the top 25 antibiotics across different species. The stacked bar plot represents the log-transformed frequency of resistance for each antibiotic. Each bar is divided by species, showing the contribution of each species to the overall resistance for that antibiotic. Within each bar, species are sorted by their frequency of resistance, with species contributing fewer samples placed lower in the bar.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.95\textwidth]{img/antibiotic_resistance_distribution_filtered_2017.png}
-	\caption{Antibiotic resistance distribution for the year 2017. The stacked bar plot shows the log-transformed frequency of resistance for the top 25 antibiotics. Each bar is divided by species, with colors representing different species. The total resistance count for each antibiotic is shown in gray, with contributions from individual species stacked below. The plot highlights the predominant species contributing to antibiotic resistance, including \textit{Pseudomonas aeruginosa} (light green) \textit{Staphylococcus aureus} (dark green), \textit{Streptococcus agalactiae} (pink), \textit{Klebsiella pneumoniae} (light brown), \textit{Eschericia coli} (light blue), and \textit{Staphylococcus epidermidis} (dark blue).}
+	\caption{Antibiotic resistance distribution for the year 2017. The stacked bar plot shows the log-transformed frequency of resistance for the top 25 antibiotics. Each bar is divided by species, with colors representing different species. The total resistance count for each antibiotic is shown in gray, with contributions from individual species stacked below. Within each bar, species are sorted by their frequency of resistance, with species contributing fewer samples placed lower in the bar. The plot highlights the predominant species contributing to antibiotic resistance.}
 	\label{fig:antibiotic_resistance_distribution}
 \end{figure}
+
+The data reveal that resistance is predominantly observed in a few species, with notable contributions from \textit{Pseudomonas aeruginosa} (light green), \textit{Staphylococcus aureus} (dark green), \textit{Streptococcus agalactiae} (pink), \textit{Klebsiella pneumoniae} (light brown), \textit{Escherichia coli} (light blue), and \textit{Staphylococcus epidermidis} (dark blue). These species frequently appear across multiple antibiotics.
+
+The antibiotics with the highest frequency of resistance are Ampicillin-Amoxicillin, Penicillin, and Amoxicillin-Clavulanic Acid. The resistance is primarily driven by \textit{Staphylococcus epidermidis}, \textit{Escherichia coli}, and \textit{Staphylococcus aureus}. There is a noticeable variation in the species composition of resistance for different antibiotics.
 
 \subsubsection*{Ridge Model Classification}
 Figure \ref{fig:ROC_ridge} shows the ROC curves for the Ridge model. The top plot displays the ROC curves for the first 15 classes of antibiotics, with AUC values ranging from 0.78 to 0.87. Antibiotics such as Oxacillin and Cefazolin achieved the highest AUC values of 0.87, while Ciprofloxacin, Cotrimoxazole, and Levofloxacin had the lowest AUC values of 0.78. The bottom plot includes the ROC curves for the remaining 12 classes of antibiotics, where the AUC values range from 0.78 to 0.95. Colistin exhibited the highest AUC value, whereas Ceftriaxone and Piperacillin-Tazobactam had the lowest AUC values of 0.78. Overall, the Ridge model demonstrated a mean AUC value of 0.83 across the 27 antibiotics.
@@ -994,13 +992,92 @@ UMAP demonstrates a clearer separation of species compared to PCA. Distinct clus
 
 Overall, these dimensionality reduction techniques provide valuable insights into the structure of the dataset, with UMAP offering a more effective visualization of species segregation.
 
+\subsubsection*{Machine Learning Model Comparison}
+The performance of four different machine learning models—Ridge Regression, Random Forest (RF), Elastic Net, and Support Vector Machine (SVM)—in predicting species from the dataset is illustrated in Figure \ref{fig:model_comparison_species}. The models were evaluated using mean test scores (accuracy) obtained through five-fold cross-validation, with data categorized by year (2015, 2016, 2017, 2018) and an aggregated category for all years combined.
 
+Ridge Regression exhibits moderate performance across all years, with mean test scores ranging approximately between 0.2 and 0.6. Although there is some variability in its performance, Ridge Regression generally does not achieve the highest accuracy among the models. This moderate performance can be attributed to Ridge Regression’s ability to handle multicollinearity by penalizing large coefficients, thereby improving generalization but not excelling in prediction accuracy for this dataset. The underperformance of Ridge Regression, along with Elastic Net, suggests that linear models are insufficient for capturing the complex interactions necessary to accurately classify species within this dataset. The nature of the data likely requires models capable of capturing non-linear relationships and interactions between features.
+
+In contrast, Random Forest demonstrates relatively high and consistent performance, with mean test scores often exceeding 0.8. The ensemble nature of Random Forest, which aggregates the predictions of multiple decision trees, contributes to its robustness and ability to handle complex interactions within the data. This model’s effectiveness in capturing non-linear relationships and reducing overfitting makes it a reliable choice for species classification.
+
+Elastic Net shows poor performance compared to the other models, with mean test scores mostly below 0.2. This model appears to struggle with species classification, likely due to its simultaneous application of L1 and L2 penalties, which can lead to overshrinking of coefficients and insufficient complexity to capture the data patterns. The underperformance of Elastic Net highlights its limitations in scenarios requiring high-dimensional feature interactions and underscores the necessity for more complex models that can capture the nuances in the data.
+
+The Support Vector Machine (SVM) model achieves the highest mean test scores, often close to 1.0 for the years 2016 through 2018. SVM also shows high performance for 2015 but with slightly more variability. The strength of SVM lies in its ability to find the optimal hyperplane that separates classes with maximum margin, which is particularly beneficial in high-dimensional spaces. 
+
+The findings from this comparison align with the results presented by Mortier et al. (2019) \cite{mortierBacterialSpeciesIdentification2021} in their benchmarking study of bacterial species identification using MALDI-TOF mass spectrometry and machine learning techniques. Mortier et al. also observed that SVM outperforms other models, including Random Forest, in species identification tasks. The high accuracy of SVM in both studies underscores its robustness and effectiveness in handling complex biological data.
+
+A relevant consideration in this analysis is the potential impact of data quality over the years. If the physical machinery used to record the data was not properly maintained or if it experienced wear due to regular usage, one might expect data drift over time. This drift could lead to inconsistencies, which would manifest as poorer performance in the aggregated category compared to individual years. However, the aggregated category does not perform worse than the individual years. This suggests that either the data quality has been consistently maintained across the years, or that the models used are robust enough to handle any minor variations in the data.
+
+Overall, the SVM model emerges as the top performer in species prediction, followed by Random Forest, which also demonstrates high and consistent accuracy. Ridge Regression provides moderate performance, while Elastic Net consistently underperforms. These results emphasize the importance of model selection in bioinformatics applications and highlight the superior capabilities of SVM and Random Forest in species classification tasks. Integrating insights from Mortier et al. (2019) strengthens the evidence for the reliability of SVM and Random Forest in complex predictive tasks.
+
+\subsection*{Antimicrobial Resistance}
+\subsubsection*{Resistance Distribution}
+The analysis of antibiotic resistance distribution across different species for the year 2017, as visualized in Figure \ref{fig:antibiotic_resistance_distribution}, highlights significant insights into the patterns of resistance. For a more comprehensive understanding of these trends, visualizations for the years 2015, 2016, and 2018 have been included in the supplementary material (\ref{fig:resistance_distribution_2015}, \ref{fig:resistance_distribution_2016}, \ref{fig:resistance_distribution_2018}, respectively). These figures illustrate similar resistance distributions for the top 25 antibiotics in each respective year.
+
+In 2015, the resistance profile is similar to that observed in 2017, with \textit{S. epidermidis}, \textit{E. coli}, and \textit{S. aureus} being the primary contributors. This consistency suggests stable resistance patterns for these species across the years.
+
+The 2016 data show a slight shift in the species contributing to resistance, with increased contributions from \textit{P. aeruginosa} and \textit{K. pneumoniae} for certain antibiotics. This shift might be attributed to changes in antibiotic usage, bacterial evolution, or differences in sample collection and analysis methods.
+
+By 2018, the resistance trends largely mirror those observed in 2017, with continued dominance of \textit{S. aureus}, \textit{E. coli}, and \textit{S. epidermidis}. However, there is an increased presence of \textit{S. agalactiae} and \textit{P. aeruginosa} for some antibiotics, indicating ongoing shifts in resistance patterns.
+
+These findings align with broader studies on antimicrobial resistance, which consistently identify \textit{S. aureus} and \textit{E. coli} as major contributors due to their prevalence and adaptability. Tacconelli et al. (2018) \cite{tacconelliDiscoveryResearchDevelopment2018} provide extensive evidence on the prevalence of resistance in these species, highlighting their significant role in the global burden of antimicrobial resistance.
+
+\subsubsection*{Model Performance}
+The performance of the Ridge and Random Forest models in classifying antibiotic resistance was evaluated using ROC curves (Figures \ref{fig:ROC_ridge} and \ref{fig:ROC_rf}). The preprocessing steps, particularly log-transformation, LOWESS smoothing, and rescaling, were crucial in stabilizing variance, normalizing the data, and enhancing signal clarity by reducing noise.
+
+In contrast, Weis et al. (2022) \cite{weisDirectAntimicrobialResistance2022} used a different preprocessing approach. They binned the mass spectra with a bin size of 3 Da to handle measurement noise and ensure computational tractability. This method partitions the m/z axis into equal-sized bins and sums the intensity of all measurements within each bin, resulting in a fixed-dimensional vector of 6,000 features for each sample. Their study achieved high AUROC values (e.g., 0.80 for oxacillin resistance in Staphylococcus aureus), demonstrating the potential of machine learning to accelerate resistance determination. The models in this study showed comparable or higher performance for several antibiotics, likely somewhat due to the different preprocessing techniques and hyperparameter settings.
+
+Data filtering for focusing on the most prevalent resistances also lead to increased performance by all models. By selecting the top 25 most frequent resistances, the models trained on a consistent and significant set of phenotypes, reducing dataset complexity and likely made it easier for the models to identify important features.
+
+The Ridge model, with a mean AUC value of 0.83, performed notably lower compared to the Random Forest model, which exhibited a mean AUC value of 0.89. The higher performance of the Random Forest model suggests its superiority in handling complex, non-linear relationships in the data. The CNN model further demonstrated strong classification capabilities with a mean AUC value of 0.90 across the 27 antibiotics.
+
+Despite the CNN model's slightly higher performance, it is important to consider the complexity and computational cost associated with training and deploying CNNs. While the CNN achieved a marginal increase in AUC compared to the Random Forest model, this improvement may not justify the additional computational resources and time required for CNN training and optimization. The Random Forest model, being less complex and easier to implement, offers a more practical solution for many applications, particularly when computational efficiency and simplicity are priorities. However, CNNs provide additional benefits in feature extraction and interpretability, as techniques like Shapley values and GradCAM can be used to understand and visualize the model's decision-making process. This will be discussed in more detail in the section below.
+
+Given the highly imbalanced nature of the dataset, with approximately 95\% negative samples (no resistance), the \( F_\beta \) loss function was chosen for its ability to focus on hard-to-classify samples \cite{leeSurrogateLossFunction2021}. This focus on the minority class (resistant samples) improved the model's ability to detect resistance despite the imbalance. 
+
+It was not viable to create a model for each individual year of data (2015, 2016, 2017, and 2018) due to the limited amount of data points available for each year. Instead, concatenating the datasets from all four years provided a larger and more comprehensive dataset, enhancing the model's predictive power. This approach mitigated the issue of data sparsity and allowed the models to learn more robust patterns from the combined dataset. This is also a good indication of resistance to antibiotics is a more complex problem
+
+The Weis et al. study emphasized the importance of large, high-quality datasets and advanced preprocessing techniques. Their binning approach contrasts with the smoothing and rescaling methods used in our study, which may account for some of the differences in model performance. Their work supports the notion that incorporating comprehensive preprocessing and careful data curation can significantly enhance model performance, reinforcing the methodologies applied here.
+
+\subsubsection*{Feature Extraction}
+The application of Shapley values and GradCAM for feature importance mapping provides valuable insights into the predictive mechanisms of the CNN model. These methods not only enhance the interpretability of the model but also highlight critical regions of the mass-to-charge (m/z) spectrum that are pivotal in predicting antibiotic resistance.
+
+The Shapley Value Sampling method, as depicted in Figure \ref{fig:feature_shapley}, identifies specific m/z values that significantly contribute to the prediction of Tobramycin resistance. The presence of both positive and negative Shapley values indicates which features (m/z values) contribute positively or negatively to the model's predictions. The sparsity of significant Shapley values across the spectrum suggests that the model relies on specific peaks, rather than a broad range of values, to make its predictions. This sparsity can guide further investigation into these critical regions, potentially uncovering underlying biological or chemical markers associated with resistance.
+
+GradCAM, shown in Figure \ref{fig:feature_gradcam}, provides a complementary perspective by highlighting regions of the spectrum that influence the CNN's predictions. The sparser distribution of important features compared to Shapley values suggests that the CNN model focuses on distinct, influential peaks within the spectrum. This method emphasizes the localized nature of the important features, aligning with the idea that specific m/z values are crucial for accurate resistance prediction.
+
+Both methods largely agree on the important features, as seen in the figures, indicating a robust identification of critical spectral regions. However, GradCAM has a significant advantage in terms of computational efficiency. Calculating GradCAM is much faster compared to Shapley values, making it a recommended method for retrieving feature mappings when speed is a crucial factor.
+
+The use of these feature mapping techniques enhances the transparency of the CNN model, making it easier to understand how the model arrives at its predictions. This transparency is crucial for validating the model's predictions and ensuring trust in its application within clinical settings. By identifying key spectral regions associated with antibiotic resistance, these methods can also inform targeted experimental validation, potentially leading to new insights into resistance mechanisms.
+
+Furthermore, the ability to visualize feature importance can aid in refining and optimizing the model. For instance, understanding which features are most influential can guide the development of more focused and efficient preprocessing steps, or inform the selection of features for training more streamlined models.
+
+Upon examining the Tobramycin feature importance plots, a prominent symmetrical peak is observed around 9100 m/z. A closer analysis of the feature importance map reveals that this peak is composed of several significant alternating peaks centered around 9085 m/z (Figure \ref{fig:tobramycin_zoomed}). This high variation in feature importance values corresponds to the peak of the MS spectrum. It is crucial to note that these feature importance values are mapped back to the original input vector, assigning values to each 0.5 Da interval. This level of granularity exceeds what is typically expected from such spectra, as an actual spectrum would not exhibit such abrupt interruptions. For future work, applying a smoothing technique, such as LOWESS used in the preprocessing step, to the feature importance values could help mitigate these sharp variations and provide a more realistic representation.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/Tobramycin_zoomed.png}
+	\caption{Zoomed-in feature importance values derived using GradCAM for Tobramycin resistance around 9085 m/z. The top plot shows the positive and negative feature importances, while the bottom plot overlays these values on the original MALDI-TOF spectrum. This detailed view highlights the significant impact of specific spectral features on the model's predictions.}
+	\label{fig:tobramycin_zoomed}
+\end{figure}
+
+Finally, while other studies have succesfully extracted feature importance maps from various machine learning models \cite{weisDirectAntimicrobialResistance2022,wangRapidDetectionHeterogeneous2018,feucherollesCombinationMALDITOFMass2022}, I have at time of writing failed to find any studies that have experimentally determined whether or not these feature maps identify relevant proteins that are conducive to resistance. One potential problem with regards to this method is the limitation of MALDI-TOF in terms of its mass detection interval between approximately 2-20 kDa, which mostly includes ribosomal proteins along with certain housekeeping genes (stably expressed genes) \cite{singhalMALDITOFMassSpectrometry2015}. A few  examples of this is, first, the AcrAB-TolC multidrug efflux pump found in \textit{E. coli}  \cite{wangAllostericTransportMechanism2017} which consists of three proteins with masses of 42.2 kDa, 113.6 kDa, and 53.7 kDa, respectively. Similarly, \( \beta \)-lactamase proteins that break down Penicillin with a mass of at least 29 kDa (depending on class) \cite{jelschLactamaseTEM1Coli1992}. However, smaller protein subunits like the AcrZ protein (5.3 kDa) that associates with the aforementioned multidrug efflux pump may still be detectable through this method \cite{hobbsConservedSmallProtein2012}. 
+
+In conclusion, the application of Shapley values and GradCAM in this study not only enhances the interpretability of the CNN model but also provides critical insights into the specific spectral features that drive resistance predictions. These findings underscore the importance of interpretability in machine learning models, particularly in the context of clinical decision-making and antibiotic resistance research.
+
+To illustrate that not all classes are equally easy to determine singular important features for, Clindamycin is shown in Figure \ref{fig:clindamycin_gradcam}. The remaining figures for other antibiotics can be found on the GitHub page linked under the methods section ("Code Availability").
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/Clindamycin_gradcam.png}
+	\caption{Feature importance values derived using GradCAM for a CNN model predicting Clindamycin resistance. The top plot shows Shapley values across the m/z spectrum, while the bottom plot overlays these values on the original MALDI-TOF spectrum. This figure illustrates the variability in feature importance across different antibiotics, highlighting that not all classes are equally easy to determine.}
+	\label{fig:clindamycin_gradcam}
+\end{figure}
 
 \newpage
 \printbibliography
 
 \clearpage
-\renewcommand{\thefigure}{Supplementary \arabic{figure}}
+\renewcommand{\thefigure}{S\arabic{figure}}
 \renewcommand{\figurename}{}
 \setcounter{figure}{0}
 
@@ -1074,7 +1151,26 @@ Overall, these dimensionality reduction techniques provide valuable insights int
 	\label{fig:umap_2018}
 \end{figure}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/antibiotic_resistance_distribution_filtered_2015.png}
+	\caption{Antibiotic resistance distribution for 2015}
+	\label{fig:resistance_distribution_2015}
+\end{figure}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/antibiotic_resistance_distribution_filtered_2016.png}
+	\caption{Antibiotic resistance distribution for 2016}
+	\label{fig:resistance_distribution_2016}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/antibiotic_resistance_distribution_filtered_2018.png}
+	\caption{Antibiotic resistance distribution for 2018}
+	\label{fig:resistance_distribution_2018}
+\end{figure}
 
 
 

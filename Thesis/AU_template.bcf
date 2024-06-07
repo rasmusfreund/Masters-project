@@ -2426,6 +2426,17 @@
     <bcf:citekey order="42" intorder="1">kokhlikyanCaptumUnifiedGeneric</bcf:citekey>
     <bcf:citekey order="43" intorder="1">ottoStaphylococcusEpidermidisAccidental2009</bcf:citekey>
     <bcf:citekey order="43" intorder="2">russoMedicalEconomicImpact2003</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">mortierBacterialSpeciesIdentification2021</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">tacconelliDiscoveryResearchDevelopment2018</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">weisDirectAntimicrobialResistance2022</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">leeSurrogateLossFunction2021</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">weisDirectAntimicrobialResistance2022</bcf:citekey>
+    <bcf:citekey order="48" intorder="2">wangRapidDetectionHeterogeneous2018</bcf:citekey>
+    <bcf:citekey order="48" intorder="3">feucherollesCombinationMALDITOFMass2022</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">singhalMALDITOFMassSpectrometry2015</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">wangAllostericTransportMechanism2017</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">jelschLactamaseTEM1Coli1992</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">hobbsConservedSmallProtein2012</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

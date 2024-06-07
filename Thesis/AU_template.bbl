@@ -2946,6 +2946,983 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S1286457903000492
       \endverb
     \endentry
+    \entry{mortierBacterialSpeciesIdentification2021}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=c4507670449edf91bf40a8467d9a6f44}{%
+           family={Mortier},
+           familyi={M\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a3f4785339e8470185d627c1e8875591}{%
+           family={Wieme},
+           familyi={W\bibinitperiod},
+           given={Anneleen\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=905158312d57c2658889bbe4c86ed26c}{%
+           family={Vandamme},
+           familyi={V\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=188cd3aa7976e91433eceb833e209dc6}{%
+           family={Waegeman},
+           familyi={W\bibinitperiod},
+           given={Willem},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{bec0644002ddc9a6df34f8dbb19ed709}
+      \strng{fullhash}{6f6994a913e24dc834a85e347265893d}
+      \strng{fullhashraw}{6f6994a913e24dc834a85e347265893d}
+      \strng{bibnamehash}{bec0644002ddc9a6df34f8dbb19ed709}
+      \strng{authorbibnamehash}{bec0644002ddc9a6df34f8dbb19ed709}
+      \strng{authornamehash}{bec0644002ddc9a6df34f8dbb19ed709}
+      \strng{authorfullhash}{6f6994a913e24dc834a85e347265893d}
+      \strng{authorfullhashraw}{6f6994a913e24dc834a85e347265893d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Today machine learning methods are commonly deployed for bacterial species identification using MALDI-TOF mass spectrometry data. However, most of the studies reported in literature only consider very traditional machine learning methods on small datasets that contain a limited number of species. In this paper we present benchmarking results on an unprecedented scale for a wide range of machine learning methods, using datasets that contain almost 100,000 spectra and more than 1000 different species. The size and the diversity of the data allow to compare three important identification scenarios that are often not distinguished in literature, i.e., identification for novel biological replicates, novel strains and novel species that are not present in the training data. The results demonstrate that in all three scenarios acceptable identification rates are obtained, but the numbers are typically lower than those reported in studies with a more limited analysis. Using hierarchical classification methods, we also demonstrate that taxonomic information is in general not well preserved in MALDI-TOF mass spectrometry data. For the novel species scenario, we apply for the first time neural networks with Monte Carlo dropout, which have shown to be successful in other domains, such as computer vision, for the detection of novel species.}
+      \field{issn}{20010370}
+      \field{journaltitle}{Computational and Structural Biotechnology Journal}
+      \field{langid}{english}
+      \field{shortjournal}{Computational and Structural Biotechnology Journal}
+      \field{shorttitle}{Bacterial Species Identification Using {{MALDI-TOF}} Mass Spectrometry and Machine Learning Techniques}
+      \field{title}{Bacterial Species Identification Using {{MALDI-TOF}} Mass Spectrometry and Machine Learning Techniques: {{A}} Large-Scale Benchmarking Study}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{19}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{6157\bibrangedash 6168}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.csbj.2021.11.004
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\R8C2X7I2\Mortier et al. - 2021 - Bacterial species identification using MALDI-TOF m.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S2001037021004694
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S2001037021004694
+      \endverb
+    \endentry
+    \entry{tacconelliDiscoveryResearchDevelopment2018}{article}{}{}
+      \name{author}{82}{}{%
+        {{hash=e4e1dbc540335ac9efd528dd16999856}{%
+           family={Tacconelli},
+           familyi={T\bibinitperiod},
+           given={Evelina},
+           giveni={E\bibinitperiod}}}%
+        {{hash=00a384ddf3fb175b4a81946a55c60ac9}{%
+           family={Carrara},
+           familyi={C\bibinitperiod},
+           given={Elena},
+           giveni={E\bibinitperiod}}}%
+        {{hash=048bb80e488d3ae92492f471d22d7e0b}{%
+           family={Savoldi},
+           familyi={S\bibinitperiod},
+           given={Alessia},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5c73935e4621b912983feb766fcf45dc}{%
+           family={Harbarth},
+           familyi={H\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=46dca5a3a1554f596e260cfdece0106d}{%
+           family={Mendelson},
+           familyi={M\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a575429f0c9dcab0f8bb4481c0685f43}{%
+           family={Monnet},
+           familyi={M\bibinitperiod},
+           given={Dominique\bibnamedelima L},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=5e1921c8b37a50337c563b6e7f3e6207}{%
+           family={Pulcini},
+           familyi={P\bibinitperiod},
+           given={Céline},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e2ef77505372d8a137da3e466482cc93}{%
+           family={Kahlmeter},
+           familyi={K\bibinitperiod},
+           given={Gunnar},
+           giveni={G\bibinitperiod}}}%
+        {{hash=aa5d5dc38a5e0902f22e731e41f46cbc}{%
+           family={Kluytmans},
+           familyi={K\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c07aa3ecaf2c84c98c34fa43e39bf543}{%
+           family={Carmeli},
+           familyi={C\bibinitperiod},
+           given={Yehuda},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d92c73d1af05c5a737a3c8aff9d1d990}{%
+           family={Ouellette},
+           familyi={O\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d442ad5973cfd3a4b4f325e44daa2648}{%
+           family={Outterson},
+           familyi={O\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=94ecdced3199f5028ac04a1edbb24a01}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Jean},
+           giveni={J\bibinitperiod}}}%
+        {{hash=80cb13d2832a12f6690930a15e305685}{%
+           family={Cavaleri},
+           familyi={C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=813ec054200de01f7ffeddbd896a39d4}{%
+           family={Cox},
+           familyi={C\bibinitperiod},
+           given={Edward\bibnamedelima M},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=2fd10ee7d13d25bbe080d6bfd53fe546}{%
+           family={Houchens},
+           familyi={H\bibinitperiod},
+           given={Chris\bibnamedelima R},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=7c7f478d479a2707f764b35c92c0dfd1}{%
+           family={Grayson},
+           familyi={G\bibinitperiod},
+           given={M\bibnamedelima Lindsay},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=72154d778b3b424107dd967b986ae0f2}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b7acd92370ebc710e94101f0e3f5ceae}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Nalini},
+           giveni={N\bibinitperiod}}}%
+        {{hash=19db3a90858f54e27f9366547779c212}{%
+           family={Theuretzbacher},
+           familyi={T\bibinitperiod},
+           given={Ursula},
+           giveni={U\bibinitperiod}}}%
+        {{hash=0f17c4c5b654fd56b29a028b076bf955}{%
+           family={Magrini},
+           familyi={M\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ae4167831a8e0136df8e58ae640a03b6}{%
+           family={Aboderin},
+           familyi={A\bibinitperiod},
+           given={Aaron\bibnamedelima Oladipo},
+           giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=9b8f44a901f8cabee44e4d7514f7e421}{%
+           family={Al-Abri},
+           familyi={A\bibinithyphendelim A\bibinitperiod},
+           given={Seif\bibnamedelima Salem},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=675d6ae8649c425513c21950519ebd0b}{%
+           family={Awang\bibnamedelima Jalil},
+           familyi={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Nordiah},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b5f5bbd51abbd67247201e31596c0821}{%
+           family={Benzonana},
+           familyi={B\bibinitperiod},
+           given={Nur},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6add9a1196649dacaac4f4c73b7acf5f}{%
+           family={Bhattacharya},
+           familyi={B\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9d561e866c1ab21d6e64aa4f875be2f7}{%
+           family={Brink},
+           familyi={B\bibinitperiod},
+           given={Adrian\bibnamedelima John},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=2cb0028e4317bf4a85e9a1b48c199e72}{%
+           family={Burkert},
+           familyi={B\bibinitperiod},
+           given={Francesco\bibnamedelima Robert},
+           giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=ee5b4a5201bc76b8f6bfe60acfa79065}{%
+           family={Cars},
+           familyi={C\bibinitperiod},
+           given={Otto},
+           giveni={O\bibinitperiod}}}%
+        {{hash=18955c02d606945c148646f340341db3}{%
+           family={Cornaglia},
+           familyi={C\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+        {{hash=bfd6ed561aa7b0e14dc8162d7af8c392}{%
+           family={Dyar},
+           familyi={D\bibinitperiod},
+           given={Oliver\bibnamedelima James},
+           giveni={O\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5f19ba0858ab13963df24cef200381e1}{%
+           family={Friedrich},
+           familyi={F\bibinitperiod},
+           given={Alex\bibnamedelima W},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=99d6e373ef0f0c0d042b980619cdb597}{%
+           family={Gales},
+           familyi={G\bibinitperiod},
+           given={Ana\bibnamedelima C},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=ca945d17113ee74aecb683a547fb85b0}{%
+           family={Gandra},
+           familyi={G\bibinitperiod},
+           given={Sumanth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2f859d221dda56c8ca6e7efccfd419d1}{%
+           family={Giske},
+           familyi={G\bibinitperiod},
+           given={Christian\bibnamedelima Georg},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=de56a1ec3ba1245110e84cffd3126fe9}{%
+           family={Goff},
+           familyi={G\bibinitperiod},
+           given={Debra\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b1518a3119776336606b25ae3c2a7929}{%
+           family={Goossens},
+           familyi={G\bibinitperiod},
+           given={Herman},
+           giveni={H\bibinitperiod}}}%
+        {{hash=31b7dbd6087b677b8bcf3394003bcad6}{%
+           family={Gottlieb},
+           familyi={G\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3084b1b0afe3fe7266f37e9276d5b7ca}{%
+           family={Guzman\bibnamedelima Blanco},
+           familyi={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d1c09523d76c25704688835e72be349e}{%
+           family={Hryniewicz},
+           familyi={H\bibinitperiod},
+           given={Waleria},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a453649b698fea1d9908300d68b01c8f}{%
+           family={Kattula},
+           familyi={K\bibinitperiod},
+           given={Deepthi},
+           giveni={D\bibinitperiod}}}%
+        {{hash=70385a62a5945f20b90b479761a0ed65}{%
+           family={Jinks},
+           familyi={J\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f6c29aced7c9d74c4fc1a0d81562addb}{%
+           family={Kanj},
+           familyi={K\bibinitperiod},
+           given={Souha\bibnamedelima S},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=44c2237021755358d11474d7e818a042}{%
+           family={Kerr},
+           familyi={K\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ef3b9af73692724120eed147c7c0a446}{%
+           family={Kieny},
+           familyi={K\bibinitperiod},
+           given={Marie-Paule},
+           giveni={M\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=379c1272c33e1c783acc3ad06b5dc929}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Yang\bibnamedelima Soo},
+           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1f417fa59cfbcc1a58b2d52e647ca68a}{%
+           family={Kozlov},
+           familyi={K\bibinitperiod},
+           given={Roman\bibnamedelima S},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=803236e883e6555a81c2b454de4c5b01}{%
+           family={Labarca},
+           familyi={L\bibinitperiod},
+           given={Jaime},
+           giveni={J\bibinitperiod}}}%
+        {{hash=55b6fc11a3ac803cb8010a4a21299ad3}{%
+           family={Laxminarayan},
+           familyi={L\bibinitperiod},
+           given={Ramanan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9d8acd4cd1744d1d3d104e283658c8a8}{%
+           family={Leder},
+           familyi={L\bibinitperiod},
+           given={Karin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b3b6f6c7778e382152e786170ef70b20}{%
+           family={Leibovici},
+           familyi={L\bibinitperiod},
+           given={Leonard},
+           giveni={L\bibinitperiod}}}%
+        {{hash=fb95672cfc75f36129ca5d24e25c0d1d}{%
+           family={Levy-Hara},
+           familyi={L\bibinithyphendelim H\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b40b82ca65283b1310278d09a38ffadf}{%
+           family={Littman},
+           familyi={L\bibinitperiod},
+           given={Jasper},
+           giveni={J\bibinitperiod}}}%
+        {{hash=34cb3edb261b54c1bf1a507604daac97}{%
+           family={Malhotra-Kumar},
+           familyi={M\bibinithyphendelim K\bibinitperiod},
+           given={Surbhi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6bc8bd14d16ddeb0cae5822f1dd482bf}{%
+           family={Manchanda},
+           familyi={M\bibinitperiod},
+           given={Vikas},
+           giveni={V\bibinitperiod}}}%
+        {{hash=9005fce49ce04ea633cf6cdfcd35b12e}{%
+           family={Moja},
+           familyi={M\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=4380c96c40425161db05a332891c25ec}{%
+           family={Ndoye},
+           familyi={N\bibinitperiod},
+           given={Babacar},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8d1758a98ea61981798d8e7475702b5f}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Angelo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d08c984619a65e424929005ec19e9bdd}{%
+           family={Paterson},
+           familyi={P\bibinitperiod},
+           given={David\bibnamedelima L},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=2d6972bb5ec1ab4cc4c065348a13a545}{%
+           family={Paul},
+           familyi={P\bibinitperiod},
+           given={Mical},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c854a6dd40cfe40d1e96fa1de65e4a34}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Haibo},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5c496032eee20ea4996e24c0a68eb95e}{%
+           family={Ramon-Pardo},
+           familyi={R\bibinithyphendelim P\bibinitperiod},
+           given={Pilar},
+           giveni={P\bibinitperiod}}}%
+        {{hash=85c646c216535373d21fd197ac907294}{%
+           family={Rodríguez-Baño},
+           familyi={R\bibinithyphendelim B\bibinitperiod},
+           given={Jesús},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b1898821fb8d9d32a2dc40eb9cc56520}{%
+           family={Sanguinetti},
+           familyi={S\bibinitperiod},
+           given={Maurizio},
+           giveni={M\bibinitperiod}}}%
+        {{hash=632113fcaacd8be90b8fdd79e328efc7}{%
+           family={Sengupta},
+           familyi={S\bibinitperiod},
+           given={Sharmila},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0b0f636347d05b3b92ea430ca94b1832}{%
+           family={Sharland},
+           familyi={S\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b117e3a5b51a944b9207cc318d3ba9f5}{%
+           family={Si-Mehand},
+           familyi={S\bibinithyphendelim M\bibinitperiod},
+           given={Massinissa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d4b7b43a2f59d0633b4cc08383ac6104}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={Lynn\bibnamedelima L},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=81d6b7761f018961b4edaaad94ee3990}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Wonkeung},
+           giveni={W\bibinitperiod}}}%
+        {{hash=dbbff205710da328c3c3e4b0867405d0}{%
+           family={Steinbakk},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=38b93cbb6e256f367564da8846533f43}{%
+           family={Thomsen},
+           familyi={T\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8604be4bdc86d8b10ce521a7d97f8008}{%
+           family={Thwaites},
+           familyi={T\bibinitperiod},
+           given={Guy\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6c7bb414104c8a73100712f003248b7e}{%
+           family={Van\bibnamedelimb Der\bibnamedelima Meer},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Jos\bibnamedelima Wm},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=77c0a691c3b0a3749bbc72773d49682c}{%
+           family={Van\bibnamedelima Kinh},
+           familyi={V\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Nguyen},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9c22e202a292588613503ff364191f69}{%
+           family={Vega},
+           familyi={V\bibinitperiod},
+           given={Silvio},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9f95d8926c4e04ad258550d57ea6cc93}{%
+           family={Villegas},
+           familyi={V\bibinitperiod},
+           given={Maria\bibnamedelima Virginia},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=0114e497c8b84033a1ea86eb41d73976}{%
+           family={Wechsler-Fördös},
+           familyi={W\bibinithyphendelim F\bibinitperiod},
+           given={Agnes},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9867f394c9c44b3d18ced2037bc5b4fe}{%
+           family={Wertheim},
+           familyi={W\bibinitperiod},
+           given={Heiman\bibnamedelimb Frank\bibnamedelima Louis},
+           giveni={H\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=3ce4260a6d0a52b9004983d79d8d3940}{%
+           family={Wesangula},
+           familyi={W\bibinitperiod},
+           given={Evelyn},
+           giveni={E\bibinitperiod}}}%
+        {{hash=437bbf835d91f7bc126fbe7716f8325f}{%
+           family={Woodford},
+           familyi={W\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3804a924d0c51000ac90cde7f9a3366b}{%
+           family={Yilmaz},
+           familyi={Y\bibinitperiod},
+           given={Fidan\bibnamedelima O},
+           giveni={F\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=718d0914b0f38a95317ff17fade677d3}{%
+           family={Zorzet},
+           familyi={Z\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f8c27e7dce21ff5a76f6973ef05014b}
+      \strng{fullhash}{81493d4c522ecba49efd66952e3ead9a}
+      \strng{fullhashraw}{81493d4c522ecba49efd66952e3ead9a}
+      \strng{bibnamehash}{3f8c27e7dce21ff5a76f6973ef05014b}
+      \strng{authorbibnamehash}{3f8c27e7dce21ff5a76f6973ef05014b}
+      \strng{authornamehash}{3f8c27e7dce21ff5a76f6973ef05014b}
+      \strng{authorfullhash}{81493d4c522ecba49efd66952e3ead9a}
+      \strng{authorfullhashraw}{81493d4c522ecba49efd66952e3ead9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Background The spread of antibiotic-resistant bacteria poses a substantial threat to morbidity and mortality worldwide. Due to its large public health and societal implications, multidrug-resistant tuberculosis has been long regarded by WHO as a global priority for investment in new drugs. In 2016, WHO was requested by member states to create a priority list of other antibiotic-resistant bacteria to support research and development of effective drugs.}
+      \field{issn}{14733099}
+      \field{journaltitle}{The Lancet Infectious Diseases}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{3}
+      \field{shortjournal}{The Lancet Infectious Diseases}
+      \field{shorttitle}{Discovery, Research, and Development of New Antibiotics}
+      \field{title}{Discovery, Research, and Development of New Antibiotics: The {{WHO}} Priority List of Antibiotic-Resistant Bacteria and Tuberculosis}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{18}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{318\bibrangedash 327}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/S1473-3099(17)30753-3
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\7WYNTMH5\Tacconelli et al. - 2018 - Discovery, research, and development of new antibi.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1473309917307533
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1473309917307533
+      \endverb
+    \endentry
+    \entry{wangRapidDetectionHeterogeneous2018}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=cef172fa580b4920784e33e2d535094f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hsin-Yao},
+           giveni={H\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=392bb9e5add4d8972f77cb9c47bd2b5b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chun-Hsien},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=b0e928f1a0e03bfcc191b94fa8d5bd4e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Tzong-Yi},
+           giveni={T\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=08f060f00ec5bbbdfc42f1480818d7d3}{%
+           family={Horng},
+           familyi={H\bibinitperiod},
+           given={Jorng-Tzong},
+           giveni={J\bibinithyphendelim T\bibinitperiod}}}%
+        {{hash=e873e9d50ed431831004d3bc35d476e0}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Tsui-Ping},
+           giveni={T\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=8337946aacf0732eebcff42fd48b37af}{%
+           family={Tseng},
+           familyi={T\bibinitperiod},
+           given={Yi-Ju},
+           giveni={Y\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=c63330c55c8c7c86ead33e805ee06f5e}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Jang-Jih},
+           giveni={J\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{64c67168e7ed25cc43b71da6a408ad1d}
+      \strng{fullhash}{7906fe1b637bc6f717af2a3ff220a74b}
+      \strng{fullhashraw}{7906fe1b637bc6f717af2a3ff220a74b}
+      \strng{bibnamehash}{64c67168e7ed25cc43b71da6a408ad1d}
+      \strng{authorbibnamehash}{64c67168e7ed25cc43b71da6a408ad1d}
+      \strng{authornamehash}{64c67168e7ed25cc43b71da6a408ad1d}
+      \strng{authorfullhash}{7906fe1b637bc6f717af2a3ff220a74b}
+      \strng{authorfullhashraw}{7906fe1b637bc6f717af2a3ff220a74b}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{11}
+      \field{issn}{1664-302X}
+      \field{journaltitle}{Frontiers in Microbiology}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{shortjournal}{Front. Microbiol.}
+      \field{shorttitle}{Rapid {{Detection}} of {{Heterogeneous Vancomycin-Intermediate Staphylococcus}} Aureus {{Based}} on {{Matrix-Assisted Laser Desorption Ionization Time-of-Flight}}}
+      \field{title}{Rapid {{Detection}} of {{Heterogeneous Vancomycin-Intermediate Staphylococcus}} Aureus {{Based}} on {{Matrix-Assisted Laser Desorption Ionization Time-of-Flight}}: {{Using}} a {{Machine Learning Approach}} and {{Unbiased Validation}}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2393}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/fmicb.2018.02393
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\QERQMSIB\Wang et al. - 2018 - Rapid Detection of Heterogeneous Vancomycin-Interm.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/article/10.3389/fmicb.2018.02393/full
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/article/10.3389/fmicb.2018.02393/full
+      \endverb
+    \endentry
+    \entry{feucherollesCombinationMALDITOFMass2022}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=bc61adaaaae5856809c97391a8ce97d1}{%
+           family={Feucherolles},
+           familyi={F\bibinitperiod},
+           given={Maureen},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9997e2ecfd24cdb75352ff3d0b2c5069}{%
+           family={Nennig},
+           familyi={N\bibinitperiod},
+           given={Morgane},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6fd2819e7e57530f97890c7d93f7ff70}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Sören\bibnamedelima L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=6fb8503c20d4e69b07d20f334d3f863b}{%
+           family={Martiny},
+           familyi={M\bibinitperiod},
+           given={Delphine},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c3d2700d287bf0fb6316f9c1b52a96f9}{%
+           family={Losch},
+           familyi={L\bibinitperiod},
+           given={Serge},
+           giveni={S\bibinitperiod}}}%
+        {{hash=966c477a417c9961d8e60029b3e9b4bd}{%
+           family={Penny},
+           familyi={P\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b6eb8f1a8d914ce0e206fcad4802c9a7}{%
+           family={Cauchie},
+           familyi={C\bibinitperiod},
+           given={Henry-Michel},
+           giveni={H\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=86ecb68d5af8beef682276c110664a99}{%
+           family={Ragimbeau},
+           familyi={R\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{5233da8b66dcef1fa9f2a51ccae1273b}
+      \strng{fullhash}{2458c0b48f2d53122d87a97e414a5ece}
+      \strng{fullhashraw}{2458c0b48f2d53122d87a97e414a5ece}
+      \strng{bibnamehash}{5233da8b66dcef1fa9f2a51ccae1273b}
+      \strng{authorbibnamehash}{5233da8b66dcef1fa9f2a51ccae1273b}
+      \strng{authornamehash}{5233da8b66dcef1fa9f2a51ccae1273b}
+      \strng{authorfullhash}{2458c0b48f2d53122d87a97e414a5ece}
+      \strng{authorfullhashraw}{2458c0b48f2d53122d87a97e414a5ece}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{While MALDI-TOF mass spectrometry (MS) is widely considered as the reference method for the rapid and inexpensive identification of microorganisms in routine laboratories, less attention has been addressed to its ability for detection of antimicrobial resistance (AMR). Recently, some studies assessed its potential application together with machine learning for the detection of AMR in clinical pathogens. The scope of this study was to investigate MALDI-TOF MS protein mass spectra combined with a prediction approach as an AMR screening tool for relevant foodborne pathogens, such as Campylobacter coli and Campylobacter jejuni . A One-Health panel of 224 C. jejuni and 116 C. coli strains was phenotypically tested for seven antimicrobial resistances, i.e., ciprofloxacin, erythromycin, tetracycline, gentamycin, kanamycin, streptomycin, and ampicillin, independently, and were submitted, after an on- and off-plate protein extraction, to MALDI Biotyper analysis, which yielded one average spectra per isolate and type of extraction. Overall, high performance was observed for classifiers detecting susceptible as well as ciprofloxacin- and tetracycline-resistant isolates. A maximum sensitivity and a precision of 92.3 and 81.2\%, respectively, were reached. No significant prediction performance differences were observed between on- and off-plate types of protein extractions. Finally, three putative AMR biomarkers for fluoroquinolones, tetracyclines, and aminoglycosides were identified during the current study. Combination of MALDI-TOF MS and machine learning could be an efficient and inexpensive tool to swiftly screen certain AMR in foodborne pathogens, which may enable a rapid initiation of a precise, targeted antibiotic treatment.}
+      \field{day}{18}
+      \field{issn}{1664-302X}
+      \field{journaltitle}{Frontiers in Microbiology}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{shortjournal}{Front. Microbiol.}
+      \field{shorttitle}{Combination of {{MALDI-TOF Mass Spectrometry}} and {{Machine Learning}} for {{Rapid Antimicrobial Resistance Screening}}}
+      \field{title}{Combination of {{MALDI-TOF Mass Spectrometry}} and {{Machine Learning}} for {{Rapid Antimicrobial Resistance Screening}}: {{The Case}} of {{Campylobacter}} Spp.}
+      \field{urlday}{6}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{12}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{804484}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/fmicb.2021.804484
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\E3I4EV5P\Feucherolles et al. - 2022 - Combination of MALDI-TOF Mass Spectrometry and Mac.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/articles/10.3389/fmicb.2021.804484/full
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/articles/10.3389/fmicb.2021.804484/full
+      \endverb
+    \endentry
+    \entry{singhalMALDITOFMassSpectrometry2015}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=64aa00fce73811088987c39b913b6f03}{%
+           family={Singhal},
+           familyi={S\bibinitperiod},
+           given={Neelja},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6f429abbdf00e2829bc3db724739047b}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Manish},
+           giveni={M\bibinitperiod}}}%
+        {{hash=84c7546fabfaddd2462f9d7354b8a3d2}{%
+           family={Kanaujia},
+           familyi={K\bibinitperiod},
+           given={Pawan\bibnamedelima K.},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=cf7e8702f36245c4b969c8ef4c2b6de9}{%
+           family={Virdi},
+           familyi={V\bibinitperiod},
+           given={Jugsharan\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{10175d602874eda9a17518184a7bedeb}
+      \strng{fullhash}{ee11d95219c42f1665923dec7f369c0b}
+      \strng{fullhashraw}{ee11d95219c42f1665923dec7f369c0b}
+      \strng{bibnamehash}{10175d602874eda9a17518184a7bedeb}
+      \strng{authorbibnamehash}{10175d602874eda9a17518184a7bedeb}
+      \strng{authornamehash}{10175d602874eda9a17518184a7bedeb}
+      \strng{authorfullhash}{ee11d95219c42f1665923dec7f369c0b}
+      \strng{authorfullhashraw}{ee11d95219c42f1665923dec7f369c0b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{5}
+      \field{issn}{1664-302X}
+      \field{journaltitle}{Frontiers in Microbiology}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{shortjournal}{Front. Microbiol.}
+      \field{shorttitle}{{{MALDI-TOF}} Mass Spectrometry}
+      \field{title}{{{MALDI-TOF}} Mass Spectrometry: An Emerging Technology for Microbial Identification and Diagnosis}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{6}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.3389/fmicb.2015.00791
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\PFRLA5FC\Singhal et al. - 2015 - MALDI-TOF mass spectrometry an emerging technolog.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://journal.frontiersin.org/Article/10.3389/fmicb.2015.00791/abstract
+      \endverb
+      \verb{url}
+      \verb http://journal.frontiersin.org/Article/10.3389/fmicb.2015.00791/abstract
+      \endverb
+    \endentry
+    \entry{wangAllostericTransportMechanism2017}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=e879808d99137738e801f62283395bcd}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhao},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=00aa48c948275277572359cbe77d3bbb}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Guizhen},
+           giveni={G\bibinitperiod}}}%
+        {{hash=64bf299a13d8ff2e5c59dfc777fe1fbc}{%
+           family={Hryc},
+           familyi={H\bibinitperiod},
+           given={Corey\bibnamedelima F},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=0cb2304b18d4917c490ec7148ca59238}{%
+           family={Blaza},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelima N},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=e947484e67fb8cb869e8cb635895a248}{%
+           family={Serysheva},
+           familyi={S\bibinitperiod},
+           given={Irina\bibnamedelima I},
+           giveni={I\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=4f6e1662f3d6eff26859eee001023b88}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima F},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=8de956fe2ed2e77198cbb48b5a0942f5}{%
+           family={Chiu},
+           familyi={C\bibinitperiod},
+           given={Wah},
+           giveni={W\bibinitperiod}}}%
+        {{hash=0a4bc562b48228fa665b5aaea9aafae0}{%
+           family={Luisi},
+           familyi={L\bibinitperiod},
+           given={Ben\bibnamedelima F},
+           giveni={B\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=872b6e2950f56673f83c271ad482f976}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Dijun},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{3facad0cb40df6b894c36d07856e4924}
+      \strng{fullhash}{c5353530f955fdc4bab7afec8c99d208}
+      \strng{fullhashraw}{c5353530f955fdc4bab7afec8c99d208}
+      \strng{bibnamehash}{3facad0cb40df6b894c36d07856e4924}
+      \strng{authorbibnamehash}{3facad0cb40df6b894c36d07856e4924}
+      \strng{authornamehash}{3facad0cb40df6b894c36d07856e4924}
+      \strng{authorfullhash}{c5353530f955fdc4bab7afec8c99d208}
+      \strng{authorfullhashraw}{c5353530f955fdc4bab7afec8c99d208}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bacterial efflux pumps confer multidrug resistance by transporting diverse antibiotics from the cell. In Gram-negative bacteria, some of these pumps form multi-protein assemblies that span the cell envelope. Here, we report the near-atomic resolution cryoEM structures of the Escherichia coli AcrAB-TolC multidrug efflux pump in resting and drug transport states, revealing a quaternary structural switch that allosterically couples and synchronizes initial ligand binding with channel opening. Within the transport-activated state, the channel remains open even though the pump cycles through three distinct conformations. Collectively, our data provide a dynamic mechanism for the assembly and operation of the AcrAB-TolC pump.}
+      \field{day}{29}
+      \field{issn}{2050-084X}
+      \field{journaltitle}{eLife}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{title}{An Allosteric Transport Mechanism for the {{AcrAB-TolC}} Multidrug Efflux Pump}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{6}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e24905}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.7554/eLife.24905
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\2PY243AS\Wang et al. - 2017 - An allosteric transport mechanism for the AcrAB-To.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://elifesciences.org/articles/24905
+      \endverb
+      \verb{url}
+      \verb https://elifesciences.org/articles/24905
+      \endverb
+    \endentry
+    \entry{jelschLactamaseTEM1Coli1992}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=f97c6564c77e332122006e6ee7236f20}{%
+           family={Jelsch},
+           familyi={J\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=531a77290bae1bdda990f879979fa3bb}{%
+           family={Lenfant},
+           familyi={L\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=e1ca524dbdd4f9e2f7b334955bf1c9d5}{%
+           family={Masson},
+           familyi={M\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=67422bd08b1d5d62f809e2334e10054a}{%
+           family={Samama},
+           familyi={S\bibinitperiod},
+           given={J.P.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c535b7db02fdff457158355abc2431a}
+      \strng{fullhash}{3e0b7f05e7311feb86606dc925794d15}
+      \strng{fullhashraw}{3e0b7f05e7311feb86606dc925794d15}
+      \strng{bibnamehash}{2c535b7db02fdff457158355abc2431a}
+      \strng{authorbibnamehash}{2c535b7db02fdff457158355abc2431a}
+      \strng{authornamehash}{2c535b7db02fdff457158355abc2431a}
+      \strng{authorfullhash}{3e0b7f05e7311feb86606dc925794d15}
+      \strng{authorfullhashraw}{3e0b7f05e7311feb86606dc925794d15}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The crystal structure of β‐lactamase TEM1 from E. coli has been solved to 2.5 Å resolution by X‐ray diffraction methods and refined to a crystallographic R‐factor of 22.7\%. The structure was determined by multiple isomorphous replacement using four heavy atom derivatives. The solution from molecular replacement, using a polyalanine model constructed from the C α coordinates of S. Aureus PC1 enzyme, provided a set of phases used for heavy atom derivatives analysis. The E. coli β‐lactamase TEM1 is made up of two domains whose topology is similar to that of the PC1 enzyme. However, global superposition or the two proteins shows significant differences.}
+      \field{day}{9}
+      \field{issn}{0014-5793, 1873-3468}
+      \field{journaltitle}{FEBS Letters}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{2}
+      \field{shortjournal}{FEBS Letters}
+      \field{title}{Β‐lactamase {{TEM1}} of {{{\emph{E}}}}{\emph{. Coli}} {{Crystal}} Structure Determination at 2.5 {{Å}} Resolution}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{299}
+      \field{year}{1992}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{135\bibrangedash 142}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/0014-5793(92)80232-6
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\G2CV7VBN\Jelsch et al. - 1992 - β‐lactamase TEM1 of E. coli Crystal structu.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://febs.onlinelibrary.wiley.com/doi/10.1016/0014-5793%2892%2980232-6
+      \endverb
+      \verb{url}
+      \verb https://febs.onlinelibrary.wiley.com/doi/10.1016/0014-5793%2892%2980232-6
+      \endverb
+    \endentry
+    \entry{hobbsConservedSmallProtein2012}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=b477e074ae7f9ff03922035128592e87}{%
+           family={Hobbs},
+           familyi={H\bibinitperiod},
+           given={Errett\bibnamedelima C.},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d000d241ba968e5d04e1af15524091c0}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Xuefeng},
+           giveni={X\bibinitperiod}}}%
+        {{hash=f171c9fa79293f068c26fa9c8dfb8477}{%
+           family={Paul},
+           familyi={P\bibinitperiod},
+           given={Brian\bibnamedelima J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5b666656df9988b914f51033ec24605e}{%
+           family={Astarita},
+           familyi={A\bibinitperiod},
+           given={Jillian\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=261acbc44d46fcba8b470b4f6573bd41}{%
+           family={Storz},
+           familyi={S\bibinitperiod},
+           given={Gisela},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5884278efb18cfc8d76dcfb8588ce72}
+      \strng{fullhash}{1555a3f701a80c824ba084549cceed7b}
+      \strng{fullhashraw}{1555a3f701a80c824ba084549cceed7b}
+      \strng{bibnamehash}{f5884278efb18cfc8d76dcfb8588ce72}
+      \strng{authorbibnamehash}{f5884278efb18cfc8d76dcfb8588ce72}
+      \strng{authornamehash}{f5884278efb18cfc8d76dcfb8588ce72}
+      \strng{authorfullhash}{1555a3f701a80c824ba084549cceed7b}
+      \strng{authorfullhashraw}{1555a3f701a80c824ba084549cceed7b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The AcrAB–TolC multidrug efflux pump confers resistance to a wide variety of antibiotics and other compounds in Escherichia coli . Here we show that AcrZ (formerly named YbhT), a 49-amino-acid inner membrane protein, associates with the AcrAB-TolC complex. Co-purification of AcrZ with AcrB, in the absence of both AcrA and TolC, two-hybrid assays and suppressor mutations indicate that this interaction occurs through the inner membrane protein AcrB. The highly conserved acrZ gene is coregulated with acrAB through induction by the MarA, Rob, and SoxS transcription regulators. In addition, mutants lacking AcrZ are sensitive to many, but not all, of the antibiotics transported by AcrAB–TolC. This differential antibiotic sensitivity suggests that AcrZ may enhance the ability of the AcrAB–TolC pump to export certain classes of substrates.}
+      \field{day}{9}
+      \field{issn}{0027-8424, 1091-6490}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{41}
+      \field{shortjournal}{Proc. Natl. Acad. Sci. U.S.A.}
+      \field{title}{Conserved Small Protein Associates with the Multidrug Efflux Pump {{AcrB}} and Differentially Affects Antibiotic Resistance}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{109}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{16696\bibrangedash 16701}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.1210093109
+      \endverb
+      \verb{file}
+      \verb C:\Users\rasmu\Zotero\storage\CKB5GIKE\Hobbs et al. - 2012 - Conserved small protein associates with the multid.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pnas.org/doi/full/10.1073/pnas.1210093109
+      \endverb
+      \verb{url}
+      \verb https://pnas.org/doi/full/10.1073/pnas.1210093109
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

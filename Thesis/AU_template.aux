@@ -133,8 +133,8 @@
 \newlabel{fig:species_umap}{{13}{40}{Uniform Manifold Approximation and Projection (UMAP) of the 2017 dataset by species. Each point represents a sample, and the colors correspond to different species. The UMAP plot reveals distinct clusters for several species, indicating effective capture of dataset structure}{figure.caption.16}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Comparison of species prediction performance across different machine learning models (Ridge, Random Forest (RF), Elastic Net, and Support Vector Machine (SVM)). Each point represents a five-fold cross-validation for one set of parameters for the respective model. The x-axis categorizes the data by year and includes an aggregated category for all years combined. The y-axis shows the mean test score (accuracy). SVM and Random Forest generally achieve the highest accuracy, with SVM outperforming all other models. Ridge Regression shows moderate performance, and Elastic Net consistently underperforms.}}{41}{figure.caption.17}\protected@file@percent }
 \newlabel{fig:model_comparison_species}{{14}{41}{Comparison of species prediction performance across different machine learning models (Ridge, Random Forest (RF), Elastic Net, and Support Vector Machine (SVM)). Each point represents a five-fold cross-validation for one set of parameters for the respective model. The x-axis categorizes the data by year and includes an aggregated category for all years combined. The y-axis shows the mean test score (accuracy). SVM and Random Forest generally achieve the highest accuracy, with SVM outperforming all other models. Ridge Regression shows moderate performance, and Elastic Net consistently underperforms}{figure.caption.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Antibiotic resistance distribution for the year 2017. The stacked bar plot shows the log-transformed frequency of resistance for the top 25 antibiotics. Each bar is divided by species, with colors representing different species. The total resistance count for each antibiotic is shown in gray, with contributions from individual species stacked below. The plot highlights the predominant species contributing to antibiotic resistance, including \textit  {Pseudomonas aeruginosa} (light green) \textit  {Staphylococcus aureus} (dark green), \textit  {Streptococcus agalactiae} (pink), \textit  {Klebsiella pneumoniae} (light brown), \textit  {Eschericia coli} (light blue), and \textit  {Staphylococcus epidermidis} (dark blue).}}{42}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:antibiotic_resistance_distribution}{{15}{42}{Antibiotic resistance distribution for the year 2017. The stacked bar plot shows the log-transformed frequency of resistance for the top 25 antibiotics. Each bar is divided by species, with colors representing different species. The total resistance count for each antibiotic is shown in gray, with contributions from individual species stacked below. The plot highlights the predominant species contributing to antibiotic resistance, including \textit {Pseudomonas aeruginosa} (light green) \textit {Staphylococcus aureus} (dark green), \textit {Streptococcus agalactiae} (pink), \textit {Klebsiella pneumoniae} (light brown), \textit {Eschericia coli} (light blue), and \textit {Staphylococcus epidermidis} (dark blue)}{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Antibiotic resistance distribution for the year 2017. The stacked bar plot shows the log-transformed frequency of resistance for the top 25 antibiotics. Each bar is divided by species, with colors representing different species. The total resistance count for each antibiotic is shown in gray, with contributions from individual species stacked below. Within each bar, species are sorted by their frequency of resistance, with species contributing fewer samples placed lower in the bar. The plot highlights the predominant species contributing to antibiotic resistance.}}{42}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:antibiotic_resistance_distribution}{{15}{42}{Antibiotic resistance distribution for the year 2017. The stacked bar plot shows the log-transformed frequency of resistance for the top 25 antibiotics. Each bar is divided by species, with colors representing different species. The total resistance count for each antibiotic is shown in gray, with contributions from individual species stacked below. Within each bar, species are sorted by their frequency of resistance, with species contributing fewer samples placed lower in the bar. The plot highlights the predominant species contributing to antibiotic resistance}{figure.caption.18}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Receiver Operating Charateristic (ROC) curves for a Ridge model trained on the entire DRIAMS-A dataset (years 2015 to 2018 concatenated).The top plot displays the ROC curves for the first 15 antibiotics, with AUC values ranging from 0.78 to 0.87. The bottom plot shows the ROC curves for the remaining 12 antibiotics, with AUC values ranging from 0.78 to 0.95. The ROC curves illustrate the model's performance in classifying antibiotic resistance, with most antibiotics achieving AUC values above 0.8.}}{43}{figure.caption.19}\protected@file@percent }
 \newlabel{fig:ROC_ridge}{{16}{43}{Receiver Operating Charateristic (ROC) curves for a Ridge model trained on the entire DRIAMS-A dataset (years 2015 to 2018 concatenated).The top plot displays the ROC curves for the first 15 antibiotics, with AUC values ranging from 0.78 to 0.87. The bottom plot shows the ROC curves for the remaining 12 antibiotics, with AUC values ranging from 0.78 to 0.95. The ROC curves illustrate the model's performance in classifying antibiotic resistance, with most antibiotics achieving AUC values above 0.8}{figure.caption.19}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Receiver Operating Characteristic (ROC) curves for a Random Forest model trained on the entire DRIAMS-A dataset (years 2015 to 2018 concatenated). The top plot displays the ROC curves for the first 15 antibiotics, with AUC values ranging from 0.86 to 0.93. The bottom plot shows the ROC curves for the remaining 12 antibiotics, with AUC values ranging from 0.82 to 0.96. The ROC curves illustrate the model's performance in classifying antibiotic resistance, with most antibiotics achieving AUC values above 0.8.}}{44}{figure.caption.20}\protected@file@percent }
@@ -149,29 +149,61 @@
 \abx@aux@segm{0}{0}{ottoStaphylococcusEpidermidisAccidental2009}
 \abx@aux@cite{0}{russoMedicalEconomicImpact2003}
 \abx@aux@segm{0}{0}{russoMedicalEconomicImpact2003}
-\newlabel{RF1}{55}
-\@writefile{lof}{\contentsline {figure}{\numberline {Supplementary 1}{\ignorespaces Distribution of Label Combinations between Train/Validation and Test Sets. The bar plot shows the frequency of some of the label combinations in the training/validation set (blue) and the test set (green). The x-axis represents the different label combinations, while the y-axis indicates the count of each combination in the respective datasets. This visualization demonstrates that the stratified split maintains the distribution of label combinations across the train/validation and test sets, ensuring that the datasets are representative of each other.}}{55}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:multilabel_split}{{Supplementary 1}{55}{Distribution of Label Combinations between Train/Validation and Test Sets. The bar plot shows the frequency of some of the label combinations in the training/validation set (blue) and the test set (green). The x-axis represents the different label combinations, while the y-axis indicates the count of each combination in the respective datasets. This visualization demonstrates that the stratified split maintains the distribution of label combinations across the train/validation and test sets, ensuring that the datasets are representative of each other}{figure.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Supplementary 2}{\ignorespaces text}}{56}{figure.caption.25}\protected@file@percent }
-\newlabel{fig:pca_remaining}{{Supplementary 2}{56}{text}{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Supplementary 3}{\ignorespaces text}}{56}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:umap_remaining}{{Supplementary 3}{56}{text}{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Supplementary 4}{\ignorespaces Principal Component Analysis (PCA) of the 2015 dataset by species.}}{57}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:pca_2015}{{Supplementary 4}{57}{Principal Component Analysis (PCA) of the 2015 dataset by species}{figure.caption.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Supplementary 5}{\ignorespaces Principal Component Analysis (PCA) of the 2016 dataset by species.}}{58}{figure.caption.28}\protected@file@percent }
-\newlabel{fig:pca_2016}{{Supplementary 5}{58}{Principal Component Analysis (PCA) of the 2016 dataset by species}{figure.caption.28}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Supplementary 6}{\ignorespaces Principal Component Analysis (PCA) of the 2018 dataset by species.}}{59}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:pca_2018}{{Supplementary 6}{59}{Principal Component Analysis (PCA) of the 2018 dataset by species}{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Supplementary 7}{\ignorespaces UMAP of the 2015 dataset by species.}}{60}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:umap_2015}{{Supplementary 7}{60}{UMAP of the 2015 dataset by species}{figure.caption.30}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Supplementary 8}{\ignorespaces UMAP of the 2017 dataset by species.}}{60}{figure.caption.31}\protected@file@percent }
-\newlabel{fig:umap_2017}{{Supplementary 8}{60}{UMAP of the 2017 dataset by species}{figure.caption.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {Supplementary 9}{\ignorespaces UMAP of the 2018 dataset by species.}}{61}{figure.caption.32}\protected@file@percent }
-\newlabel{fig:umap_2018}{{Supplementary 9}{61}{UMAP of the 2018 dataset by species}{figure.caption.32}{}}
-\newlabel{LastPage}{{}{61}{}{page.61}{}}
-\gdef\lastpage@lastpage{61}
-\gdef\lastpage@lastpageHy{61}
-\abx@aux@read@bbl@mdfivesum{FA96C7889DC4B0DD3A820A0C43C8ED49}
+\abx@aux@cite{0}{mortierBacterialSpeciesIdentification2021}
+\abx@aux@segm{0}{0}{mortierBacterialSpeciesIdentification2021}
+\abx@aux@cite{0}{tacconelliDiscoveryResearchDevelopment2018}
+\abx@aux@segm{0}{0}{tacconelliDiscoveryResearchDevelopment2018}
+\abx@aux@cite{0}{weisDirectAntimicrobialResistance2022}
+\abx@aux@segm{0}{0}{weisDirectAntimicrobialResistance2022}
+\abx@aux@cite{0}{leeSurrogateLossFunction2021}
+\abx@aux@segm{0}{0}{leeSurrogateLossFunction2021}
+\abx@aux@cite{0}{weisDirectAntimicrobialResistance2022}
+\abx@aux@segm{0}{0}{weisDirectAntimicrobialResistance2022}
+\abx@aux@cite{0}{wangRapidDetectionHeterogeneous2018}
+\abx@aux@segm{0}{0}{wangRapidDetectionHeterogeneous2018}
+\abx@aux@cite{0}{feucherollesCombinationMALDITOFMass2022}
+\abx@aux@segm{0}{0}{feucherollesCombinationMALDITOFMass2022}
+\abx@aux@cite{0}{singhalMALDITOFMassSpectrometry2015}
+\abx@aux@segm{0}{0}{singhalMALDITOFMassSpectrometry2015}
+\abx@aux@cite{0}{wangAllostericTransportMechanism2017}
+\abx@aux@segm{0}{0}{wangAllostericTransportMechanism2017}
+\abx@aux@cite{0}{jelschLactamaseTEM1Coli1992}
+\abx@aux@segm{0}{0}{jelschLactamaseTEM1Coli1992}
+\abx@aux@cite{0}{hobbsConservedSmallProtein2012}
+\abx@aux@segm{0}{0}{hobbsConservedSmallProtein2012}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Zoomed-in feature importance values derived using GradCAM for Tobramycin resistance around 9085 m/z. The top plot shows the positive and negative feature importances, while the bottom plot overlays these values on the original MALDI-TOF spectrum. This detailed view highlights the significant impact of specific spectral features on the model's predictions.}}{55}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:tobramycin_zoomed}{{21}{55}{Zoomed-in feature importance values derived using GradCAM for Tobramycin resistance around 9085 m/z. The top plot shows the positive and negative feature importances, while the bottom plot overlays these values on the original MALDI-TOF spectrum. This detailed view highlights the significant impact of specific spectral features on the model's predictions}{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Feature importance values derived using GradCAM for a CNN model predicting Clindamycin resistance. The top plot shows Shapley values across the m/z spectrum, while the bottom plot overlays these values on the original MALDI-TOF spectrum. This figure illustrates the variability in feature importance across different antibiotics, highlighting that not all classes are equally easy to determine.}}{57}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:clindamycin_gradcam}{{22}{57}{Feature importance values derived using GradCAM for a CNN model predicting Clindamycin resistance. The top plot shows Shapley values across the m/z spectrum, while the bottom plot overlays these values on the original MALDI-TOF spectrum. This figure illustrates the variability in feature importance across different antibiotics, highlighting that not all classes are equally easy to determine}{figure.caption.25}{}}
+\newlabel{RF1}{65}
+\@writefile{lof}{\contentsline {figure}{\numberline {S1}{\ignorespaces Distribution of Label Combinations between Train/Validation and Test Sets. The bar plot shows the frequency of some of the label combinations in the training/validation set (blue) and the test set (green). The x-axis represents the different label combinations, while the y-axis indicates the count of each combination in the respective datasets. This visualization demonstrates that the stratified split maintains the distribution of label combinations across the train/validation and test sets, ensuring that the datasets are representative of each other.}}{65}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:multilabel_split}{{S1}{65}{Distribution of Label Combinations between Train/Validation and Test Sets. The bar plot shows the frequency of some of the label combinations in the training/validation set (blue) and the test set (green). The x-axis represents the different label combinations, while the y-axis indicates the count of each combination in the respective datasets. This visualization demonstrates that the stratified split maintains the distribution of label combinations across the train/validation and test sets, ensuring that the datasets are representative of each other}{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S2}{\ignorespaces text}}{66}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:pca_remaining}{{S2}{66}{text}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S3}{\ignorespaces text}}{66}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:umap_remaining}{{S3}{66}{text}{figure.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S4}{\ignorespaces Principal Component Analysis (PCA) of the 2015 dataset by species.}}{67}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:pca_2015}{{S4}{67}{Principal Component Analysis (PCA) of the 2015 dataset by species}{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S5}{\ignorespaces Principal Component Analysis (PCA) of the 2016 dataset by species.}}{68}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:pca_2016}{{S5}{68}{Principal Component Analysis (PCA) of the 2016 dataset by species}{figure.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S6}{\ignorespaces Principal Component Analysis (PCA) of the 2018 dataset by species.}}{69}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:pca_2018}{{S6}{69}{Principal Component Analysis (PCA) of the 2018 dataset by species}{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S7}{\ignorespaces UMAP of the 2015 dataset by species.}}{69}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:umap_2015}{{S7}{69}{UMAP of the 2015 dataset by species}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S8}{\ignorespaces UMAP of the 2017 dataset by species.}}{70}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:umap_2017}{{S8}{70}{UMAP of the 2017 dataset by species}{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S9}{\ignorespaces UMAP of the 2018 dataset by species.}}{70}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:umap_2018}{{S9}{70}{UMAP of the 2018 dataset by species}{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S10}{\ignorespaces Antibiotic resistance distribution for 2015}}{71}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:resistance_distribution_2015}{{S10}{71}{Antibiotic resistance distribution for 2015}{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S11}{\ignorespaces Antibiotic resistance distribution for 2016}}{71}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:resistance_distribution_2016}{{S11}{71}{Antibiotic resistance distribution for 2016}{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S12}{\ignorespaces Antibiotic resistance distribution for 2018}}{72}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:resistance_distribution_2018}{{S12}{72}{Antibiotic resistance distribution for 2018}{figure.caption.37}{}}
+\newlabel{LastPage}{{}{72}{}{page.72}{}}
+\gdef\lastpage@lastpage{72}
+\gdef\lastpage@lastpageHy{72}
+\abx@aux@read@bbl@mdfivesum{7D77591683729BA31E434210CE7FD107}
 \abx@aux@defaultrefcontext{0}{murrayGlobalBurdenBacterial2022}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{weis2021driams}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{weisDirectAntimicrobialResistance2022}{none/global//global/global/global}
@@ -207,4 +239,12 @@
 \abx@aux@defaultrefcontext{0}{kokhlikyanCaptumUnifiedGeneric}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{ottoStaphylococcusEpidermidisAccidental2009}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{russoMedicalEconomicImpact2003}{none/global//global/global/global}
-\gdef \@abspage@last{63}
+\abx@aux@defaultrefcontext{0}{mortierBacterialSpeciesIdentification2021}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{tacconelliDiscoveryResearchDevelopment2018}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{wangRapidDetectionHeterogeneous2018}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{feucherollesCombinationMALDITOFMass2022}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{singhalMALDITOFMassSpectrometry2015}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{wangAllostericTransportMechanism2017}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{jelschLactamaseTEM1Coli1992}{none/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{hobbsConservedSmallProtein2012}{none/global//global/global/global}
+\gdef \@abspage@last{74}
