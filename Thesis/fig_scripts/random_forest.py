@@ -38,11 +38,11 @@ def plot_decision_boundary(clf, X, y, ax):
     ax.axvline(x=-1.043, ymin=0.5325, ymax=1, color='k', linestyle='--')
 
 # Plot the decision boundary and the decision tree
-fig, axes = plt.subplots(1, 2, figsize=(16, 8))
+fig, axes = plt.subplots(2, 1, figsize=(12, 16))
 
 
 # Plot the decision tree
-plot_tree(clf, filled=True, feature_names=['Feature 1', 'Feature 2'], class_names=['Class 0', 'Class 1'], ax=axes[0], fontsize=13)
+plot_tree(clf, filled=True, feature_names=['Feature 1', 'Feature 2'], class_names=['Class 0', 'Class 1'], ax=axes[0], fontsize=16)
 axes[0].set_title('Decision Tree Visualization')
 axes[0].annotate('A', xy=(0, 1), xycoords='axes fraction', ha='center', fontsize=20, fontweight='bold')
 

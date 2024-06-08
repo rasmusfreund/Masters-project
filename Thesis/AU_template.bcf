@@ -2377,40 +2377,40 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">murrayGlobalBurdenBacterial2022</bcf:citekey>
     <bcf:citekey order="2" intorder="1">murrayGlobalBurdenBacterial2022</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">weis2021driams</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">weisDirectAntimicrobialResistance2022</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">jordanMachineLearningTrends2015</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">ghahramaniProbabilisticMachineLearning2015</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">suttonReinforcementLearningIntroduction</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">friedmanRegularizationPathsGeneralized2010</bcf:citekey>
-    <bcf:citekey order="8" intorder="2">hastieElementsStatisticalLearning2009</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">whitlockAnalysisBiologicalData2015</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">hoerlRidgeRegressionBiased1970</bcf:citekey>
-    <bcf:citekey order="11" intorder="2">marquardtRidgeRegressionPractice1975</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">tibshiraniRegressionShrinkageSelection1996</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">zouRegularizationVariableSelection2005</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">dauwalderMatrixAssistedLaser2023</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">weis2021driams</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">weisDirectAntimicrobialResistance2022</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">jordanMachineLearningTrends2015</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">ghahramaniProbabilisticMachineLearning2015</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">suttonReinforcementLearningIntroduction</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">friedmanRegularizationPathsGeneralized2010</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">whitlockAnalysisBiologicalData2015</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">hoerlRidgeRegressionBiased1970</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">marquardtRidgeRegressionPractice1975</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">tibshiraniRegressionShrinkageSelection1996</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">zouRegularizationVariableSelection2005</bcf:citekey>
     <bcf:citekey order="16" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
-    <bcf:citekey order="16" intorder="2">sohilIntroductionStatisticalLearning2022</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">moodIntroductionTheoryStatistics1973</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
-    <bcf:citekey order="18" intorder="2">cortesSupportvectorNetworks1995</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="17" intorder="2">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">moodIntroductionTheoryStatistics1973</bcf:citekey>
     <bcf:citekey order="19" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
-    <bcf:citekey order="19" intorder="2">sohilIntroductionStatisticalLearning2022</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
-    <bcf:citekey order="20" intorder="2">hastieElementsStatisticalLearning2009</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">rosenblattPerceptronProbabilisticModel1958</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">hintonConnectionistLearningProcedures1989</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">hornikMultilayerFeedforwardNetworks1989</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">cortesSupportvectorNetworks1995</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">sohilIntroductionStatisticalLearning2022</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">hastieElementsStatisticalLearning2009</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">rosenblattPerceptronProbabilisticModel1958</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">hintonConnectionistLearningProcedures1989</bcf:citekey>
     <bcf:citekey order="24" intorder="1">hornikMultilayerFeedforwardNetworks1989</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">nielsenNeuralNetworksandDeepLearning2015</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">osheaIntroductionConvolutionalNeural2015</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">hornikMultilayerFeedforwardNetworks1989</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">nielsenNeuralNetworksandDeepLearning2015</bcf:citekey>
     <bcf:citekey order="27" intorder="1">osheaIntroductionConvolutionalNeural2015</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">nirthikaPoolingConvolutionalNeural2022</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">osheaIntroductionConvolutionalNeural2015</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">krizhevskyImageNetClassificationDeep2017</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">osheaIntroductionConvolutionalNeural2015</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">nirthikaPoolingConvolutionalNeural2022</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">osheaIntroductionConvolutionalNeural2015</bcf:citekey>
     <bcf:citekey order="31" intorder="1">wrobelEfficientExplanationIndividual</bcf:citekey>
     <bcf:citekey order="32" intorder="1">selvarajuGradCAMVisualExplanations2020</bcf:citekey>
     <bcf:citekey order="33" intorder="1">python</bcf:citekey>
@@ -2431,12 +2431,16 @@
     <bcf:citekey order="46" intorder="1">weisDirectAntimicrobialResistance2022</bcf:citekey>
     <bcf:citekey order="47" intorder="1">leeSurrogateLossFunction2021</bcf:citekey>
     <bcf:citekey order="48" intorder="1">weisDirectAntimicrobialResistance2022</bcf:citekey>
-    <bcf:citekey order="48" intorder="2">wangRapidDetectionHeterogeneous2018</bcf:citekey>
-    <bcf:citekey order="48" intorder="3">feucherollesCombinationMALDITOFMass2022</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">singhalMALDITOFMassSpectrometry2015</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">wangAllostericTransportMechanism2017</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">jelschLactamaseTEM1Coli1992</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">hobbsConservedSmallProtein2012</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">weisDirectAntimicrobialResistance2022</bcf:citekey>
+    <bcf:citekey order="49" intorder="2">wangRapidDetectionHeterogeneous2018</bcf:citekey>
+    <bcf:citekey order="49" intorder="3">feucherollesCombinationMALDITOFMass2022</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">singhalMALDITOFMassSpectrometry2015</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">wangAllostericTransportMechanism2017</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">jelschLactamaseTEM1Coli1992</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">hobbsConservedSmallProtein2012</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">dewaelePretrainedMaldiTransformers2024</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">liuKANKolmogorovArnoldNetworks2024</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">sabourDynamicRoutingCapsules2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

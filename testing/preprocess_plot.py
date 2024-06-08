@@ -38,34 +38,34 @@ grid = plt.GridSpec(3, 3, height_ratios=[3, 2, 3], hspace=0.25)
 # Original spectrum
 ax0 = fig.add_subplot(grid[0, :])
 ax0.plot(data['mass'], data['int'], label='Original')
-ax0.set_title('Original Spectrum')
-ax0.set_xlabel('Mass/Charge (m/z)')
+ax0.set_title('Original Mass Spectrum')
+ax0.set_xlabel('m/z')
 ax0.set_ylabel('Intensity')
 
 # Intermediate steps
 ax1 = fig.add_subplot(grid[1, 0])
 ax1.plot(data_filtered['mass'], data_filtered['int_log'], label='Log-Transformed')
-ax1.set_title('Log-Transformed Spectrum')
-ax1.set_xlabel('Mass/Charge (m/z)')
+ax1.set_title('Log-Transformed Mass Spectrum')
+ax1.set_xlabel('m/z')
 ax1.set_ylabel('Log-Intensity')
 
 ax2 = fig.add_subplot(grid[1, 1])
 ax2.plot(data_filtered['mass'], data_filtered['int_smoothed1'], label='First LOWESS Smoothing')
 ax2.set_title('First LOWESS Smoothing')
-ax2.set_xlabel('Mass/Charge (m/z)')
+ax2.set_xlabel('m/z')
 ax2.set_ylabel('Smoothed Intensity')
 
 ax3 = fig.add_subplot(grid[1, 2])
 ax3.plot(data_filtered['mass'], data_filtered['int_normalized'], label='Second LOWESS & Normalized')
 ax3.set_title('Second LOWESS\nSmoothing & Normalization')
-ax3.set_xlabel('Mass/Charge (m/z)')
+ax3.set_xlabel('m/z')
 ax3.set_ylabel('Normalized Intensity')
 
 # Final rescaled spectrum
 ax4 = fig.add_subplot(grid[2, :])
 ax4.plot(mass_new, int_smoothed_final, label='Final Rescaled & Smoothed')
-ax4.set_title('Final Rescaled & Smoothed Spectrum')
-ax4.set_xlabel('Mass/Charge (m/z)')
+ax4.set_title('Final Rescaled & Smoothed Mass Spectrum')
+ax4.set_xlabel('m/z')
 ax4.set_ylabel('Rescaled Intensity')
 
 plt.tight_layout()
